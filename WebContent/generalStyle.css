@@ -1,11 +1,43 @@
 @CHARSET "ISO-8859-1";
 
-body {background-color: #FFFFFF ;}
+/*menu-Bar  */
+div.menu{ 	border:0px;
+			padding:0px;
+			margin:0px;
+			background-color: #FFFFFF;
+			}
+ul.menu{ }
+ul.menu li { display:inline;}
+
+ul.menu li a {color: #4C4C4C;
+			  font-size: 18px;
+			  font-family: "Verdana", Arial;}
+
+/*Basic-Scheme of Boxes*/
+body { }
+ 
+ /*different content boxes*/	
+ div.content{	border:15px solid red;
+				padding:0px;
+				margin:50px;
+ 				background-color: #FFFFFF;}	
+ 
+ div.white {	background-color:#FFFFFE; 
+ 				padding: 10px;}	
+ 
+ div.lightRed {	background-color:#FFEBE6;
+ 				padding: 10px}	
+ 
+ div.willkommen{background-color:#FFFFFE; 
+ 				padding: 10px;}
+ 
+/*Text-Boxes -styles */		
 title {color: #4C4C4C; font-family: "Verdana", Arial; text-align: left}
 h1 {color: #4C4C4C; font-size: 30px; font-family: "Verdana", Arial; text-align: left}
 p {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial; text-align: justify}
+a {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe";}
+ol{ list-style:circle;}
+img {}
 
-a {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}
-
-img {]}
-/*colors for text: #1A1A1A or #333333 or #4C4C4C*/
+hr {color: #4C4C4C}
+/*ca {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}olors for text: #1A1A1A or #333333 or #4C4C4C*/
