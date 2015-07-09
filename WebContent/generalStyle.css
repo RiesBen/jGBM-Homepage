@@ -1,43 +1,92 @@
 @CHARSET "ISO-8859-1";
+	
+/*	Unterteilt in:
+		- Homepage structure elemente
+		- Generelle Definitionen
+	Benutzen in : 
+		- Hauptseite
+		- Stadtgruppenseite (modifiziert vielleicht?) */
 
-/*menu-Bar  */
-div.menu{ 	border:0px;
+
+/*Homepage Structure*/
+
+/*Navigations-Leiste -  nur für die Navigationsleiste. */
+nav.menu{ 	border:0px;
 			padding:0px;
 			margin:0px;
 			background-color: #FFFFFF;
 			}
 ul.menu{ }
 ul.menu li { display:inline;}
+ul.menu li a {	background-color:#4C4C4C; 
+				padding:10px 20px ;
+				border-radius: 4px 4px 0 0;
+				color:#FFFFFF;
+			  	font-family: "Verdana", Arial;}
 
-ul.menu li a {color: #4C4C4C;
-			  font-size: 18px;
-			  font-family: "Verdana", Arial;}
-
-/*Basic-Scheme of Boxes*/
+/*Content - Boxes: Enthalten den Inhalt der Seite*/
 body { }
- 
+section.text{}
+
  /*different content boxes*/	
  div.content{	border:15px solid red;
 				padding:0px;
 				margin:50px;
  				background-color: #FFFFFF;}	
  
- div.white {	background-color:#FFFFFE; 
- 				padding: 10px;}	
+ section.white {	background-color:#FFFFFE; 
+	 				float:justify;
+	 				padding: 10px;
+	 				border: 1px solid #E6E6E6;}	
  
- div.lightRed {	background-color:#FFEBE6;
+ section.lightRed {	background-color:#FFEBE6;
  				padding: 10px}	
+ section.text{ }
  
- div.willkommen{background-color:#FFFFFE; 
- 				padding: 10px;}
  
-/*Text-Boxes -styles */		
+ /*Willkommen-page: mit Seiten elementen für nachrichten und login*/
+ 
+  	aside.willkommen {float:right;}
+  	
+  	form.login {	background-color:#FFEBE6;
+					padding: 10px;
+					height:120px;
+					width:150px;
+					margin:10px;}	
+   		
+   		p.login {color: #4C4C4C; font-size: 14px; font-family: "Verdana", Arial; text-align: left;}
+   		input#login-user {width:100px;}
+   		input#login-password {width:100px;}
+   		input#login-submit {}
+   		
+ 	div.news {	background-color:#FFEBE6;
+ 							padding: 10px;
+ 							height:300px;
+   							width:150px;
+   							margin:10px}
+   							
+   		span.news{color: #4C4C4C; font-size: 14px; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
+   		p.news{color: #4C4C4C; font-size: 12px; font-family: "Verdana", Arial; text-align: left}	
+ 
+ 
+ /*Footer-Box soll im rot verschwinden ;)^^*/
+footer{ 		border:15px solid red;
+				padding:0px;
+				margin: 0px;
+ 				background-color: red;
+ 				color:white;}}
+
+ 				
+  					
+
+/*General-Styles: Alles was generell für die ganze Seite gelten sollte.*/		
 title {color: #4C4C4C; font-family: "Verdana", Arial; text-align: left}
 h1 {color: #4C4C4C; font-size: 30px; font-family: "Verdana", Arial; text-align: left}
+section {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial; text-align: justify}
+article {}
 p {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial; text-align: justify}
 a {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe";}
 ol{ list-style:circle;}
 img {}
-
 hr {color: #4C4C4C}
 /*ca {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}olors for text: #1A1A1A or #333333 or #4C4C4C*/
