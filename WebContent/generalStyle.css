@@ -11,42 +11,60 @@
 /*Homepage Structure*/
 
 /*Navigations-Leiste -  nur für die Navigationsleiste. */
-nav.menu{ 	border:0px;
-			padding:0px;
+nav.menu{ 	border:1px black solid;
+			border-style: solid none;
+			padding:10px;
 			margin:0px;
 			background-color: #FFFFFF;
+			
+			position:fixed;
+			top:0;
+			right:0;
+			left:0;
 			}
-ul.menu{ }
-ul.menu li { display:inline;}
-ul.menu li a {	background-color:#4C4C4C; 
-				padding:10px 20px ;
-				border-radius: 4px 4px 0 0;
-				color:#FFFFFF;
-			  	font-family: "Verdana", Arial;
-			  	text-decoration: none;}
-
+	ul.menu{float:right;
+			position: fixed;
+			right:30px;	}
+	ul.menu li { display:inline;}
+	ul.menu li a {	background-color:#4C4C4C; 
+					padding:10px 20px ;
+					border-radius: 4px 4px 0 0;
+					color:#FFFFFF;
+				  	font-family: "Verdana", Arial;
+				  	text-decoration: none;}
+	img.navigation {position: static;
+					left:0;
+					float: left}
 /*Content - Boxes: Enthalten den Inhalt der Seite*/
 body {font-size:100%; }
 section {}
 article {}
 
  /*different content boxes*/	
- div.content{	border:15px solid red;
-				padding:0px;
-				margin:50px;
+ div.content{	border:15px;
+ 				border-style: none solid solid solid;
+				border-color: #cc3731;
+				padding:0%x;
+				margin:10%;
  				background-color: #FFFFFF;}	
  
  section.white {	background-color:#FFFFFE; 
+				 	border: 1px;
+				 	border-style: none solid solid solid;
+				 	border-color:  #E6E6E6;;
 	 				float:left;
-	 				padding: 10px;
-	 				border: 1px solid #E6E6E6;
-	 				height:800px;}	
+	 				padding: 1%;
+	 				height:800px;
+	 				overflow:hide;}	
  
  section.lightRed {	background-color:#FFEBE6;
+				 	border: 1px;
+				 	border-style: none solid solid solid;
+				 	border-color:  #E6E6E6;
  					float:left;
-	 				padding: 10px;
-	 				border: 1px solid #E6E6E6;
-	 				height:800px;}
+	 				padding: 1%;
+	 				height:800px;
+	 				overflow: hide;}
 	 					
  section.text{ 	text-align:justify;
  				}
@@ -58,9 +76,10 @@ article {}
   	
   	form.login {	background-color:#FFEBE6;
 					padding: 10px;
-					height:120px;
-					width:200px;
-					margin:10px;}	
+					max-height:120px;
+					max-width:200px;
+					margin:10px;
+					z-index: 1;}	
    		
    		p.login {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
    		input#login-user {width:100px;}
@@ -68,21 +87,21 @@ article {}
    		input#login-submit {}
    		
  	div.news {	background-color:#FFEBE6;
- 							padding: 10px;
- 							height:600px;
-   							width:200px;
-   							margin:10px}
+				padding: 10px;
+				max-height:600px;
+				max-width:200px;
+				margin:10px;
+				z-index: 1;}
    							
-   		newsheader{color: #4C4C4C; font-size: 0.875em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
-   		newscontent{color:#4C4C4C ; font-size: 0.667em; font-style:italic; font-family: "Verdana", Arial; text-align: left}	
- 
+		newsheader{color: #4C4C4C; font-size: 0.875em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
+ 		newscontent{color:#4C4C4C ; font-size: 0.667em; font-style:italic; font-family: "Verdana", Arial; text-align: left}	
+
  
  /*Footer-Box soll im rot verschwinden ;)^^*/
-footer{ 		border:15px solid red;
-				padding:0px;
-				margin: 0px;
- 				background-color: red;
- 				color:white;}}
+footer{	padding:0px;
+		margin: 0px;
+		background-color: #cc3731;
+		color:white;}}
 
  				
   					
@@ -91,7 +110,7 @@ footer{ 		border:15px solid red;
 title {color: #4C4C4C; font-family: "Verdana", Arial; text-align: left}
 h1 {color: #4C4C4C; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
 p {color: #4C4C4C; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
-ol{ list-style:circle;}
+ol{ list-style:circle inside;}
 img {}
 hr {color: #4C4C4C}
 
