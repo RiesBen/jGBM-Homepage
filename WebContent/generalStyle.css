@@ -11,30 +11,37 @@
 /*Homepage Structure*/
 
 /*Navigations-Leiste -  nur für die Navigationsleiste. */
-nav.menu{ 	border:1px black solid;
+nav.menu{ 	border:1px #999999 solid;
 			border-style: solid none;
-			padding:10px;
+			padding: 10px 0 0px 0;
 			margin:0px;
 			background-color: #FFFFFF;
 			
+			height:80px;
 			position:fixed;
 			top:0;
 			right:0;
 			left:0;
 			}
-	ul.menu{float:right;
-			position: fixed;
-			right:30px;	}
-	ul.menu li { display:inline;}
-	ul.menu li a {	background-color:#4C4C4C; 
-					padding:10px 20px ;
-					border-radius: 4px 4px 0 0;
-					color:#FFFFFF;
+	ul.menu{ 	position:absolute;
+				right:50px;
+				top 10px;}
+	ul.menu li { 	display:inline;}
+	
+	ul.menu li a {	background-color:; 
+					padding: 0px 20px ;
+					border-radius: 0;
+					
+					color:#4C4C4C;
+					font-weight:bold;
 				  	font-family: "Verdana", Arial;
+				  	font-size: 1.8em;
 				  	text-decoration: none;}
-	img.navigation {position: static;
-					left:0;
-					float: left}
+	img.navigation {position: absolute;
+					left:30px;
+					top:20px;
+					margin:auto;}
+					
 /*Content - Boxes: Enthalten den Inhalt der Seite*/
 body {font-size:100%; }
 section {}
@@ -44,8 +51,8 @@ article {}
  div.content{	border:15px;
  				border-style: none solid solid solid;
 				border-color: #cc3731;
-				padding:0%x;
-				margin:10%;
+				padding:0%;
+				margin:0 10% 0 10%;
  				background-color: #FFFFFF;}	
  
  section.white {	background-color:#FFFFFE; 
@@ -54,16 +61,18 @@ article {}
 				 	border-color:  #E6E6E6;;
 	 				float:left;
 	 				padding: 1%;
-	 				height:800px;
+	 				height:1200px;
+	 				width: ;
 	 				overflow:hide;}	
  
- section.lightRed {	background-color:#FFEBE6;
-				 	border: 1px;
+ section.lightRed {	background-color:  #FFEBE6;
+ 				 	border: 1px;
 				 	border-style: none solid solid solid;
 				 	border-color:  #E6E6E6;
  					float:left;
 	 				padding: 1%;
-	 				height:800px;
+	 				height:1200px;
+	 				width: ;
 	 				overflow: hide;}
 	 					
  section.text{ 	text-align:justify;
@@ -81,14 +90,15 @@ article {}
 					margin:10px;
 					z-index: 1;}	
    		
-   		p.login {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
+   		form.login p {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
    		input#login-user {width:100px;}
    		input#login-password {width:100px;}
    		input#login-submit {}
    		
  	div.news {	background-color:#FFEBE6;
 				padding: 10px;
-				max-height:600px;
+				height:800px;
+				max-height:1200px;
 				max-width:200px;
 				margin:10px;
 				z-index: 1;}
