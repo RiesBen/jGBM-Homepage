@@ -22,11 +22,16 @@ nav.menu{ 	border:1px #999999 solid;
 			top:0;
 			right:0;
 			left:0;
-			}
+			z-index: 10;
+			resize:none;}
+			
 	ul.menu{ 	position:absolute;
 				right:50px;
-				top 10px;}
-	ul.menu li { 	display:inline;}
+				top:10px;
+				resize:none;}
+				
+	ul.menu li { 	display:inline;
+					resize:none;}
 	
 	ul.menu li a {	background-color:; 
 					padding: 0px 20px ;
@@ -36,11 +41,14 @@ nav.menu{ 	border:1px #999999 solid;
 					font-weight:bold;
 				  	font-family: "Verdana", Arial;
 				  	font-size: 1.8em;
-				  	text-decoration: none;}
+				  	text-decoration: none;
+				  	resize:none;}
+				  	
 	img.navigation {position: absolute;
 					left:30px;
 					top:20px;
-					margin:auto;}
+					margin:auto;
+					box-shadow:none}
 					
 /*Content - Boxes: Enthalten den Inhalt der Seite*/
 body {font-size:100%; }
@@ -65,7 +73,7 @@ article {}
 	 				width: ;
 	 				overflow:hide;}	
  
- section.lightRed {	background-color:  #FFEBE6;
+ section.lightRed {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
  				 	border: 1px;
 				 	border-style: none solid solid solid;
 				 	border-color:  #E6E6E6;
@@ -83,25 +91,28 @@ article {}
  	section.willkommen{ }
   	aside.willkommen {float:right;}
   	
-  	form.login {	background-color:#FFEBE6;
+  	form.login {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
 					padding: 10px;
 					max-height:120px;
-					max-width:200px;
+					max-height:1200px;
+					width: 300px;
 					margin:10px;
-					z-index: 1;}	
+					z-index: 1;
+					box-shadow:1px 1px 8px grey;}	
    		
    		form.login p {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
-   		input#login-user {width:100px;}
-   		input#login-password {width:100px;}
-   		input#login-submit {}
+   		input#login-user {position:relative; left: 40px; width:100px;}
+   		input#login-password {position:relative; left: 40px; width:100px;}
+   		input#login-submit {position:relative; left: 40px;}
    		
- 	div.news {	background-color:#FFEBE6;
+ 	div.news {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */;
 				padding: 10px;
 				height:800px;
 				max-height:1200px;
-				max-width:200px;
+				width: 300px;
 				margin:10px;
-				z-index: 1;}
+				z-index: 1;
+				box-shadow:1px 1px 8px grey;}
    							
 		newsheader{color: #4C4C4C; font-size: 0.875em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
  		newscontent{color:#4C4C4C ; font-size: 0.667em; font-style:italic; font-family: "Verdana", Arial; text-align: left}	
@@ -121,7 +132,7 @@ title {color: #4C4C4C; font-family: "Verdana", Arial; text-align: left}
 h1 {color: #4C4C4C; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
 p {color: #4C4C4C; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
 ol{ list-style:circle inside;}
-img {}
+img {box-shadow:0.5px 0.5px 8px black;}
 hr {color: #4C4C4C}
 
 /*Hyperlinks */
