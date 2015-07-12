@@ -12,7 +12,7 @@
 
 /*Navigations-Leiste -  nur für die Navigationsleiste. */
 nav.menu{ 	border:1px #999999 solid;
-			border-style: solid none;
+			border-style: none none groove none;
 			padding: 10px 0 0px 0;
 			margin:0px;
 			background-color: #FFFFFF;
@@ -72,7 +72,7 @@ article {}
 				 	border-color:  #E6E6E6;;
 
 	 				padding: 1%;
-	 				height: 75em;
+	 				height: 100em;
 	 				}	
  
  section.lightRed {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
@@ -81,9 +81,11 @@ article {}
 				 	border-color:  #E6E6E6;
 
 	 				padding: 1%;
-	 				height: 75em;
+	 				height: 100em;
 	 				}
-	 					
+section.kontakt{
+	
+}		
  section.text{ 	text-align:justify;
  				}
  
