@@ -61,28 +61,28 @@ article {}
 				border-color: #cc3731;
 				padding:0%;
 				margin:0 10% 0 10%;
- 				background-color: #FFFFFF;}	
+ 				background-color: #FFFFFF;
+ 				overflow:hidden;}
+ 					
 	img#slider {box-shadow:none;}
  
  section.white {	background-color:#FFFFFE; 
 				 	border: 1px;
 				 	border-style: none solid solid solid;
 				 	border-color:  #E6E6E6;;
-	 				float:left;
+
 	 				padding: 1%;
-	 				height:1200px;
-	 				width: ;
-	 				overflow:hide;}	
+	 				height: 75em;
+	 				}	
  
  section.lightRed {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
  				 	border: 1px;
 				 	border-style: none solid solid solid;
 				 	border-color:  #E6E6E6;
- 					float:left;
+
 	 				padding: 1%;
-	 				height:1200px;
-	 				width: ;
-	 				overflow: hide;}
+	 				height: 75em;
+	 				}
 	 					
  section.text{ 	text-align:justify;
  				}
