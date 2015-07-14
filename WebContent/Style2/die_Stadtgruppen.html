@@ -13,7 +13,88 @@
 				document.createElement("newsheader")
 				document.createElement("newscontent")
 		</script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
 
+ function initialize() {
+
+	var mycenter= new google.maps.LatLng(51.5,9.8);
+	
+	//mapeinstellung
+   var mapProp = {
+     center:mycenter,
+     //minimalisierter Zoom
+     zoomControl:true,
+     zoomControlOptions: {
+       style:google.maps.ZoomControlStyle.SMALL
+     },
+     //blendet Müll aus:
+     panControl:false,
+     streetViewControl:false,
+     
+     zoom:5,
+     mapTypeId:google.maps.MapTypeId.ROADMAP
+   };
+   
+   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+   
+   //All jgbm-Positions
+   var jgbmhamburg=new google.maps.LatLng(53.33,10.0);
+   var jgbmmarburg=new google.maps.LatLng(50.48,8.46);
+   var jgbmheidelberg=new google.maps.LatLng(49.25,8.3);
+   var jgbmtuebingen= new google.maps.LatLng(48.31,9.3);
+   
+   //all markers
+   var markerhamburg=new google.maps.Marker({
+	   position:jgbmhamburg,}); 
+   var markermarburg=new google.maps.Marker({
+	   position:jgbmmarburg,});
+   var markerheidelberg=new google.maps.Marker({
+	   position:jgbmheidelberg,});
+   var markertuebingen=new google.maps.Marker({
+	   position:jgbmtuebingen,});
+   
+   //set all markers
+	 markerhamburg.setMap(map);
+	 markermarburg.setMap(map);
+	 markerheidelberg.setMap(map);
+	 markertuebingen.setMap(map);
+	 
+	   //Links
+
+   
+   //all info Tags
+   var infowindowHH = new google.maps.InfoWindow({
+	   content:"junior GBM Hamburg"});
+   var infowindowHD = new google.maps.InfoWindow({
+	   content:"junior GBM Heidelberg"});
+   var infowindowMR = new google.maps.InfoWindow({
+	   content:"junior GBM Marburg"});
+   var infowindowTue = new google.maps.InfoWindow({
+	   content:"junior GBM Tübingen"});
+
+
+
+	 
+	//events
+	 google.maps.event.addListener(markerhamburg, 'click', function() {
+		 infowindowHH.open(map,markerhamburg)});
+	 google.maps.event.addListener(markermarburg, 'click', function() {
+		 infowindowMR.open(map,markermarburg)});
+	 google.maps.event.addListener(markertuebingen, 'click', function() {
+		 infowindowTue.open(map,markertuebingen)});
+	 google.maps.event.addListener(markerheidelberg, 'click', function() {
+		 infowindowHD.open(map,markerheidelberg)});
+	 
+//pan back
+	 google.maps.event.addListener(map,'center_changed',function() {
+		  window.setTimeout(function() {
+		    map.panTo(mycenter);
+		  },1);
+		  });
+ }
+ google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <!-- Stylesheet Einbindung-->
 <link href="../generalStyle.css" rel="stylesheet" type="text/css" />
 </head>
@@ -37,7 +118,7 @@
 		<img ID="slider" src="../pictures/sliderDummy.jpg" width=100%
 			alt="Slider-Dummy">
 		<!--Die Stadtgruppen -->
-		<section class="white">
+		<section class="white" id="stadtgruppen">
 			<a name="Stadtgruppen"></a>
 			<section class="text">
 				<h1>Die Stadtgruppen</h1>
@@ -49,12 +130,16 @@
 					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
 			</section>
-			<ol>
-				<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Hamburg</a></li>
-				<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Marburg</a></li>
-				<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Heidelburg</a></li>
-				<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Tüburg</a></li>
-			</ol>
+			<div id="locations" style="none">
+				<ol>
+				<lh> Die Stadtgruppen:<br></lh>
+					<li><a id="linktue" href="group_Tuebingen.html" title="Link zur Stadtgruppe">Hamburg</a></li>
+					<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Marburg</a></li>
+					<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Heidelburg</a></li>
+					<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Tüburg</a></li>
+				</ol>
+				<div id="googleMap" style="width:650px;height:450px;"></div>
+			</div>
 		</section>
 		<!-- Fussnote - Impressum -Teil -->
 		<footer> Impressum: Lalalaafölakbh Lorem ipsum dolor sit
