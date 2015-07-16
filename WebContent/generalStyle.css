@@ -50,10 +50,40 @@ nav.menu{ 	border:1px #999999 solid;
 					margin:auto;
 					box-shadow:none}
 					
+					
 /*Content - Boxes: Enthalten den Inhalt der Seite*/
 body {font-size:100%; }
 section {}
 article {}
+
+
+ 
+section.white {	background-color:#FFFFFE; 
+			 	border: 1px;
+			 	border-style: none solid solid solid;
+			 	border-color:  #E6E6E6;;
+ 				padding: 2% 8%;
+ 				min-height: 50em;}	
+ 
+section.lightRed {	background-color: /*#FFFFFF*/  hsl(0,70%,95%); /* or #FFEBE6 */
+ 				 	border: 1px;
+				 	border-style: none solid solid solid;
+				 	border-color: #E6E6E6;
+	 				padding: 2% 8%;
+	 				min-height: 50em;}
+
+section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
+ 				 	border: 2px;
+				 	border-style: none solid solid solid;
+				 	border-color:  #E6E6E6;
+	 				padding: 2%;
+	 				height: 100em;
+	 				color:white;}
+	section.darkRed p {color: white; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
+	section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
+
+ section.text{ 	text-align:justify;
+ 				}
 
  /*different content boxes*/	
  div.content{	border:15px;
@@ -62,90 +92,62 @@ article {}
 				padding:0%;
 				margin:0 10% 0 10%;
  				background-color: #FFFFFF;
- 				overflow:hidden;}
+ 				overflow:hidden;
+ 				box-shadow: 0px 0px 20px grey, 0px 0px 20px grey;}
+ 				
 	img#slider {box-shadow:none;}
 	img#inter {position: relative;
 				right:0;
 				left:0;
 				width:100%;	
-				box-shadow:none}
+				box-shadow:none;
+				}
+
+/*Willkommen-page: mit Seiten elementen für nachrichten und login*/
+	section.willkommen{ padding: 2% 2% 10% 2%}
+ 	aside.willkommen {float:right;}
+ 	
+ 	form.login {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
+				padding: 10px;
+				min-height: 8em;
+				width: 300px;
+				margin:10px;
+				z-index: 1;
+				box-shadow:1px 1px 8px grey;}	
+  		
+  		form.login p {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
+  		input#login-user {position:relative; left: 40px; width:100px;}
+  		input#login-password {position:relative; left: 40px; width:100px;}
+  		input#login-submit {position:relative; left: 40px;}
+  		
+	div.news {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */;
+			padding: 10px;
+			min-height: 38em;
+			width: 300px;
+			margin:10px;
+			z-index: 1;
+			box-shadow:1px 1px 8px grey;}
+  							
+	newsheader{color: #4C4C4C; font-size: 0.875em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
+	newscontent{color:#4C4C4C ; font-size: 0.667em; font-style:italic; font-family: "Verdana", Arial; text-align: left}	
+	 				
 
 section#stadtgruppen{}
 	div#locations {	min-height:450px;
 					marging: 30px;
-					padding: 30px;
-					border:1px #808080 solid;
-					box-shadow:1px 1px 8px grey;}
+					padding: 30px;}
 	div#locations ol {	float:left;
 						padding: 10px 20px 0px 40px;}
-	div#googleMap{	float: right;}
- 							
-
- 
- section.white {	background-color:#FFFFFE; 
-				 	border: 1px;
-				 	border-style: none solid solid solid;
-				 	border-color:  #E6E6E6;;
-
-	 				padding: 1%;
-	 				min-height: 50em;
-	 				}	
- 
- section.lightRed {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
- 				 	border: 1px;
-				 	border-style: none solid solid solid;
-				 	border-color:  #E6E6E6;
-
-	 				padding: 1%;
-	 				min-height: 50em;
-	 				}
-
-section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
- 				 	border: 2px;
-				 	border-style: none solid solid solid;
-				 	border-color:  #E6E6E6;
-
-	 				padding: 1%;
-	 				height: 100em;
-	 				color:white;}
-	section.darkRed p {color: white; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
-	section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
-	 				
- 				
+	div#googleMap{	float: right;
+					position:relative;
+					right: 300px;
+					top:50px;
+					width:25em;
+					height:25em;
+					box-shadow: 0px 2px 10px black;}
+								 				
 section.kontakt{ }		
- section.text{ 	text-align:justify;
- 				}
- 
- 
- /*Willkommen-page: mit Seiten elementen für nachrichten und login*/
- 	section.willkommen{ }
-  	aside.willkommen {float:right;}
-  	
-  	form.login {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
-					padding: 10px;
-					min-height: 8em;
-					width: 300px;
-					margin:10px;
-					z-index: 1;
-					box-shadow:1px 1px 8px grey;}	
-   		
-   		form.login p {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
-   		input#login-user {position:relative; left: 40px; width:100px;}
-   		input#login-password {position:relative; left: 40px; width:100px;}
-   		input#login-submit {position:relative; left: 40px;}
-   		
- 	div.news {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */;
-				padding: 10px;
-				min-height: 38em;
-				width: 300px;
-				margin:10px;
-				z-index: 1;
-				box-shadow:1px 1px 8px grey;}
-   							
-		newsheader{color: #4C4C4C; font-size: 0.875em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
- 		newscontent{color:#4C4C4C ; font-size: 0.667em; font-style:italic; font-family: "Verdana", Arial; text-align: left}	
-
- 
+  
  /*Footer-Box soll im rot verschwinden ;)^^*/
 footer{	padding:0px;
 		margin: 0px;
@@ -162,7 +164,7 @@ h1 {color: #4C4C4C; font-size: 1.875em; font-family: "Verdana", Arial; text-alig
 h2 {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
 p {color: #4C4C4C; font-size: 1.125em; font-family: "Verdana", Arial;}
 ol{ list-style:circle inside;}
-img {box-shadow:0.5px 0.5px 8px black;}
+img {box-shadow:0.5px 0.5px 8px black; box-shadow: 0px 2px 10px black;}
 hr {color: #4C4C4C}
 lh {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
 /*Hyperlinks */
