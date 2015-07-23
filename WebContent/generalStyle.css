@@ -1,4 +1,53 @@
-@CHARSET "ISO-8859-1";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*@CHARSET "UTF-8";*/
 
 /*	Unterteilt in:
 		- Homepage structure elemente
@@ -16,7 +65,6 @@ nav.menu{ 	border:1px #999999 solid;
 			padding: 10px 0 0px 0;
 			margin:0px;
 			background-color: #FFFFFF;
-			
 			height:80px;
 			position:fixed;
 			top:0;
@@ -39,7 +87,7 @@ nav.menu{ 	border:1px #999999 solid;
 					
 					color:#4C4C4C;
 					font-weight:bold;
-				  	font-family: "Verdana", Arial;
+				  	font-family: "Verdana", Arial, sans-serif;
 				  	font-size: 1.8em;
 				  	text-decoration: none;
 				  	resize:none;}
@@ -159,7 +207,11 @@ footer{	padding:0px;
   					
 
 /*General-Styles: Alles was generell für die ganze Seite gelten sollte.*/		
-title {color: #4C4C4C; font-family: "Verdana", Arial; text-align: left}
+title {
+	color: #4C4C4C; 
+	font-family: "Verdana", Arial; 
+	text-align: left
+	}
 h1 {color: #4C4C4C; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
 h2 {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
 p {color: #4C4C4C; font-size: 1.125em; font-family: "Verdana", Arial;}
@@ -169,8 +221,19 @@ hr {color: #4C4C4C}
 lh {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
 /*Hyperlinks */
 a {color: #4C4C4C; font-size: 1.250em; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe"; text-decoration: underline;}
-a:hover {color: #0000FF; font-size: 1.250em; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe";}
-a:active {color: red;; font-size: 1.250em; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe";}
+a:hover {
+	color: #0000FF; 
+	font-size: 1.250em; 
+	font-family: "Verdana", Arial; 
+	title:"Link zur Stadtgruppe"; /*is this a new standart? Wont work in any browser, I suppose*/
+}
+a:active {
+	color: red;
+	font-size: 1.250em; 
+	font-family: "Verdana", Arial; 
+	title:"Link zur Stadtgruppe";
+}
+
 /*ca {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}olors for text: #1A1A1A or #333333 or #4C4C4C*/
 
 	/*am ende Wieder Löschen:*/
