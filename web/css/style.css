@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Roboto+Slab:400,700);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -29,7 +30,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 150%;
+	font-size: 10pt;
 }
 ol, ul {
 	list-style: none;
@@ -49,22 +51,29 @@ table {
 
 /* headers, links and lists */
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Open Sans", Arial, sans-serif;
 	color: #1C1C1C
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: Arial, sans-serif;
-	margin: 12px 0 8px 0
+	font-family: 'Roboto Slab', Arial, sans-serif;
+	margin: 12px 0 8px 0;
+	font-weight: bold;
 }
 h1 {
 	font-size: 15pt;
+	margin-bottom: 15px;
+	margin-top: 25px;
 }
 p, table, ol, ul {
+	font-size: 11pt;
 	margin: 8px 0 8px 0
 }
 a, a:hover, a:visited{
 	color: #D60000;
 	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;s
 }
 
 .c {
@@ -74,11 +83,11 @@ a, a:hover, a:visited{
 .content-wrapper {
 	clear: both;
 	position: relative;
-	max-width: 1100px;
+	/*max-width: 1100px;*/
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0;
-	margin: 0 auto;
+
 }
 section.content-wrapper {
 	margin-bottom: 50px;
@@ -86,6 +95,11 @@ section.content-wrapper {
 .content {
 	box-sizing: border-box;
 	padding: 10px;
+}
+.content, .content-min {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
 }
 .content .columns-two-left{
 	float: left;
@@ -111,6 +125,29 @@ section.content-wrapper {
 .large-image#image_jgbm{
 	background-image: url('../img/image_jgbm.jpg');
 }
+#stadtgruppenMap {
+	background: transparent
+}
+
+/* gruppen */
+@media (min-width: 400px){ 
+	#stadtgruppen-liste {
+		-webkit-column-count:2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+		column-gap: 10px;
+	} 
+}
+@media (min-width: 800px){ 
+	#stadtgruppen-liste {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+		-moz-column-count: 3; /* Firefox */
+		column-count: 3;
+		column-gap: 10px;
+	} 
+}
+
+
 
 /* logo*/
 #jgbm-logo {
@@ -134,11 +171,11 @@ nav ul {
 }
 nav ul.nav li {
 	float: left;
-	margin-left: 15px;
+	margin-left: 45px;
 }
 nav ul.nav li a {
 	font-size: 11pt;
 	color: #000;
-	font-weight: bold;
+	font-weight: normal;
 }
 
