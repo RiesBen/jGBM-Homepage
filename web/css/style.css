@@ -1,0 +1,262 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Roboto+Slab:400,700);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 150%;
+	font-size: 10pt;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* headers, links and lists */
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+	color: #1C1C1C
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', Arial, sans-serif;
+	margin: 12px 0 8px 0;
+	font-weight: bold;
+}
+h1 {
+	font-size: 15pt;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+h2 {
+	font-size: 13pt;
+	margin-top: 15px;
+	margin-bottom: 12px;
+}
+h3 {
+	font-size: 11pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: bold;
+}
+h4 {
+	font-size: 11pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 10pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: normal;
+}
+h6 {
+	font-size: 9pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: bold;
+}
+p, table, ol, ul {
+	font-size: 11pt;
+	margin: 8px 0 8px 0
+}
+ul, ol {
+	margin-left: 35px;
+}
+ul {
+	list-style-type: square;
+}
+ol {
+	list-style-type: decimal
+}
+footer ul {
+	margin-left: 0;
+	list-style-type: none
+}
+a, a:hover, a:visited{
+	color: #D60000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;s
+}
+
+.c {
+	clear: both;
+}
+header:after, .content-wrapper:after{
+	clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+/* boxmodell*/
+header {
+	border-bottom: 1px solid #116484;
+}
+.content-wrapper {
+	clear: both;
+	position: relative;
+	/*max-width: 1100px;*/
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0;
+
+}
+section.content-wrapper {
+	margin-bottom: 70px;
+}
+.content {
+	box-sizing: border-box;
+	padding: 10px;
+}
+.content, .content-min {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+.content .columns-two-left{
+	float: left;
+	width: 70%;
+	box-sizing: border-box;
+}
+.content .columns-two-right{
+	float: right;
+	width: 25%;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.large-image {
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+	background: url('../img/image_start.jpg') no-repeat top center ;
+	background-size: cover;
+}
+.large-image#image_start{
+	background-image: url('../img/image_start.jpg');
+}
+.large-image#image_jgbm{
+	background-image: url('../img/image_jgbm.jpg');
+}
+.large-image#image_kontakt{
+	background-image: url('../img/image_kontakt.jpg');
+	background-position: center center;
+}
+#stadtgruppenMap {
+	background: transparent
+}
+
+/* gruppen */
+@media (min-width: 400px){ 
+	#stadtgruppen-liste, footer {
+		-webkit-column-count:2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+		column-gap: 10px;
+	} 
+	
+}
+@media (min-width: 800px){ 
+	#stadtgruppen-liste, footer {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+		-moz-column-count: 3; /* Firefox */
+		column-count: 3;
+		column-gap: 10px;
+	} 
+}
+
+
+
+/* logo*/
+#jgbm-logo {
+	position: relative;
+	display: block;
+	width: 133px;
+	height: 59px;
+	margin: 15px 10px 15px 10px;
+	box-sizing: border-box;
+	background: url('../img/jgbm_logo.jpg') no-repeat;
+	float: left;
+}
+
+/* navigation*/
+nav#topnavigation {
+	float: right;
+	margin: 42px 10px 20px 10px;
+}
+nav ul {
+	margin: 0;
+	list-style-type: none
+}
+nav ul.nav li {
+	float: left;
+	margin-left: 45px;
+}
+nav ul.nav li a {
+	font-size: 11pt;
+	color: #000;
+	font-weight: normal;
+}
+
+/* footer */
+#footer {
+	border-top: 1px solid #116484;
+	background: #3095BC;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+}
+#footer a {
+	color: #fff;
+}
+
+
+/* stadtgruppen*/
+#stadgruppe.stadtgruppe-tuebingen #jgbm-logo{
+	background-image: url('../img/jgbm_tuebingen.jpg');
+}
+
+.stadtgruppe-tuebingen #image_start {
+	background-image: url('../media/jgbm_tuebingen_start.jpg');
+	background-position: center center;
+}
+
