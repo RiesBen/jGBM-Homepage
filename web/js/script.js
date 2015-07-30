@@ -54,7 +54,29 @@ $(document).ready(function(){
 	wpx = -w  + 120 + "px"
 	$('nav ul li ul').css('margin-left', wpx)
 	
+	
+	// localscroll
+	$("nav").localScroll();
+	
+	// fix menu
+	$('nav').makeFixed({
+		onFixed: function (el)
+		{
+		    $(el).toggleClass("fixed")
+		},
+		onUnFixed: function (el)
+		{
+		    $(el).toggleClass("fixed")
+		}
+	});
+
 });
+
+
+// scrolling
+$(window).enllax();
+
+
 
 
 
