@@ -61,12 +61,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 15pt;
-	margin-bottom: 15px;
 	margin-top: 25px;
+	margin-bottom: 15px;
+}
+h2 {
+	font-size: 13pt;
+	margin-top: 15px;
+	margin-bottom: 12px;
+}
+h3 {
+	font-size: 11pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: bold;
+}
+h4 {
+	font-size: 11pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 10pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: normal;
+}
+h6 {
+	font-size: 9pt;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font-weight: bold;
 }
 p, table, ol, ul {
 	font-size: 11pt;
 	margin: 8px 0 8px 0
+}
+ul, ol {
+	margin-left: 35px;
+}
+ul {
+	list-style-type: square;
+}
+ol {
+	list-style-type: decimal
+}
+footer ul {
+	margin-left: 0;
+	list-style-type: none
 }
 a, a:hover, a:visited{
 	color: #D60000;
@@ -79,7 +121,18 @@ a:hover {
 .c {
 	clear: both;
 }
+header:after, .content-wrapper:after{
+	clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
 /* boxmodell*/
+header {
+	border-bottom: 1px solid #116484;
+}
 .content-wrapper {
 	clear: both;
 	position: relative;
@@ -90,7 +143,7 @@ a:hover {
 
 }
 section.content-wrapper {
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 }
 .content {
 	box-sizing: border-box;
@@ -103,7 +156,7 @@ section.content-wrapper {
 }
 .content .columns-two-left{
 	float: left;
-	width: 75%;
+	width: 70%;
 	box-sizing: border-box;
 }
 .content .columns-two-right{
@@ -125,21 +178,26 @@ section.content-wrapper {
 .large-image#image_jgbm{
 	background-image: url('../img/image_jgbm.jpg');
 }
+.large-image#image_kontakt{
+	background-image: url('../img/image_kontakt.jpg');
+	background-position: center center;
+}
 #stadtgruppenMap {
 	background: transparent
 }
 
 /* gruppen */
 @media (min-width: 400px){ 
-	#stadtgruppen-liste {
+	#stadtgruppen-liste, footer {
 		-webkit-column-count:2; /* Chrome, Safari, Opera */
 		-moz-column-count: 2; /* Firefox */
 		column-count: 2;
 		column-gap: 10px;
 	} 
+	
 }
 @media (min-width: 800px){ 
-	#stadtgruppen-liste {
+	#stadtgruppen-liste, footer {
 		-webkit-column-count: 3; /* Chrome, Safari, Opera */
 		-moz-column-count: 3; /* Firefox */
 		column-count: 3;
@@ -168,6 +226,7 @@ nav#topnavigation {
 }
 nav ul {
 	margin: 0;
+	list-style-type: none
 }
 nav ul.nav li {
 	float: left;
@@ -177,5 +236,27 @@ nav ul.nav li a {
 	font-size: 11pt;
 	color: #000;
 	font-weight: normal;
+}
+
+/* footer */
+#footer {
+	border-top: 1px solid #116484;
+	background: #3095BC;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+}
+#footer a {
+	color: #fff;
+}
+
+
+/* stadtgruppen*/
+#stadgruppe.stadtgruppe-tuebingen #jgbm-logo{
+	background-image: url('../img/jgbm_tuebingen.jpg');
+}
+
+.stadtgruppe-tuebingen #image_start {
+	background-image: url('../media/jgbm_tuebingen_start.jpg');
+	background-position: center center;
 }
 
