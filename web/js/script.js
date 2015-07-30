@@ -42,3 +42,19 @@ var interactions = [
         }),
 		interactions: interactions
       });
+      
+      
+
+
+// jQuery
+$(document).ready(function(){
+	// dropdown menu position
+	w = $('nav ul li ul').width()
+	console.log(w)
+	wpx = -w  + 120 + "px"
+	$('nav ul li ul').css('margin-left', wpx)
+	
+});
+
+
+
