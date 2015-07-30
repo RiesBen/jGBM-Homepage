@@ -121,7 +121,7 @@ a:hover {
 .c {
 	clear: both;
 }
-header:after, .content-wrapper:after{
+header:after, .content-wrapper:after, nav ul:after{
 	clear: both;
     content: " ";
     display: block;
@@ -197,12 +197,16 @@ section.content-wrapper {
 	
 }
 @media (min-width: 800px){ 
-	#stadtgruppen-liste, footer {
+	#stadtgruppen-liste, footer, nav ul ul {
 		-webkit-column-count: 3; /* Chrome, Safari, Opera */
 		-moz-column-count: 3; /* Firefox */
 		column-count: 3;
 		column-gap: 10px;
 	} 
+	
+	nav ul li ul {
+		margin-left: -350px;
+	}
 }
 
 
@@ -220,7 +224,12 @@ section.content-wrapper {
 }
 
 /* navigation*/
-nav#topnavigation {
+nav ul {
+	z-index: 100;
+    padding: 0px;
+    margin: 0px;
+}
+nav#topnavigation, #jgbm-start {
 	float: right;
 	margin: 42px 10px 20px 10px;
 }
@@ -228,14 +237,60 @@ nav ul {
 	margin: 0;
 	list-style-type: none
 }
-nav ul.nav li {
+nav ul li {
 	float: left;
 	margin-left: 45px;
 }
-nav ul.nav li a {
+nav ul.nav li a, #jgbm-start {
 	font-size: 11pt;
 	color: #000;
 	font-weight: normal;
+	display: block;
+}
+
+nav ul li:hover > ul {
+    visibility: visible;
+}
+nav ul li ul{
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    padding: 35px 0 15px 0;
+}
+nav ul li ul li a {
+    margin-bottom: 0px;
+}
+nav ul li ul li ul {
+	position: absolute;
+	left: 200px;
+	top:0;
+}
+nav ul li ul li{
+    float: none !important;
+    position: relative;
+}
+nav ul li ul li a:hover{
+
+}
+nav ul li ul li a{
+	width: 200px;
+	margin-right: 0px;
+	padding: 6px 8px;
+	transition: background 0.05s linear;
+}
+nav ul ul {
+	background: rgba(255, 255, 255, 0.8);
+}
+nav ul ul, nav ul ul li {
+	margin: 0;
+}
+nav ul ul li  {
+	margin-left: 35px;
+	border-bottom: 1px solid #116484;
+}
+nav ul li ul li a:hover{
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.8);
 }
 
 /* footer */
@@ -251,6 +306,11 @@ nav ul.nav li a {
 
 
 /* stadtgruppen*/
+#jgbm-start {
+	position: relative;
+	float: left;
+	display: block;
+
 #stadgruppe.stadtgruppe-tuebingen #jgbm-logo{
 	background-image: url('../img/jgbm_tuebingen.jpg');
 }
