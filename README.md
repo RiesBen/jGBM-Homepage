@@ -1,13 +1,13 @@
 # jGBM-Homepage
 Wir entwickeln eine Webseite für die Junior GBM
 
-# Konzept
+## Konzept
 Noch zu schreiben
 
-# Umsetzung
+## Umsetzung
 Wir benutzen vermutlich Drupal
 
-# Roadmap
+## Roadmap
 - Design in HTML und CSS erstellen
  - für ein Design entscheiden
 - Design in eine Drupal-Vorlage umbauen
