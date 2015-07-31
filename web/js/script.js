@@ -70,12 +70,28 @@ $(document).ready(function(){
 		    $(el).toggleClass("fixed")
 		}
 	});*/
+	
+	var nav = $('header');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
 
 });
 
 
 // scrolling
 $(window).enllax();
+
+// fixed menu
+
+
+
+
 
 
 
