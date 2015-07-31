@@ -50,44 +50,43 @@ var interactions = [
 $(document).ready(function(){
 	// dropdown menu position
 	w = $('nav ul li ul').width()
-	console.log(w)
-	wpx = -w  + 120 + "px"
-	$('nav ul li ul').css('margin-left', wpx)
+	breite = $(window).width();	
+	if(breite > 800){		
+		wpx = -w  + 120 + "px"
+		$('nav ul li ul').css('margin-left', wpx)
+	}
 	
 	
 	// localscroll
 	$("nav").localScroll();
 	
-	/*
-	// fix menu
-	$('nav').makeFixed({
-		onFixed: function (el)
-		{
-		    $(el).toggleClass("fixed")
-		},
-		onUnFixed: function (el)
-		{
-		    $(el).toggleClass("fixed")
-		}
-	});*/
-	
+	// fix menu bar on scroll
 	var nav = $('header');
-
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 1) {
+    	// only fix menu for monitors, not mobile
+    	breite = $(window).width();
+        if ($(this).scrollTop() > 1 & breite > 800) {
             nav.addClass("f-nav");
         } else {
             nav.removeClass("f-nav");
         }
     });
+    
+    
+    // mobile menu
+    $('#mobile-menu').click(function(){
+    	$('nav').toggle();
+    });
 
 });
 
 
-// scrolling
+// scrolling of background images, fancy
 $(window).enllax();
 
-// fixed menu
+
+
+
 
 
 

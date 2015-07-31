@@ -121,6 +121,9 @@ a:hover {
 .c {
 	clear: both;
 }
+.only-mobile {
+	display: none;
+}
 header:after, .content-wrapper:after, nav ul:after{
 	clear: both;
     content: " ";
