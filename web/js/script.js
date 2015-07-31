@@ -58,6 +58,7 @@ $(document).ready(function(){
 	// localscroll
 	$("nav").localScroll();
 	
+	/*
 	// fix menu
 	$('nav').makeFixed({
 		onFixed: function (el)
@@ -68,7 +69,7 @@ $(document).ready(function(){
 		{
 		    $(el).toggleClass("fixed")
 		}
-	});
+	});*/
 
 });
 
