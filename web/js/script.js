@@ -28,6 +28,11 @@ var interactions = [
 	new ol.interaction.DragZoom(),
 	new ol.interaction.DragRotate(),
 ];
+
+
+var stadtgruppen = [
+	
+]
             
  var map = new ol.Map({
         target: 'stadtgruppenMap',
