@@ -1,7 +1,16 @@
 # jGBM-Homepage
-used Eclipse for programming
-first try.
+Wir entwickeln eine Webseite für die Junior GBM
 
-Start with background and fonts
+## Konzept
+Noch zu schreiben
 
-Habe zuerst versucht die Vorlage zu erstellen, dann kommen anpassungen.
+## Umsetzung
+Wir benutzen vermutlich Drupal
+
+## Roadmap
+- Design in HTML und CSS erstellen
+ - für ein Design entscheiden
+- Design in eine Drupal-Vorlage umbauen
+- Drupal installieren und einrichten
+ - Wiki installierem
+
