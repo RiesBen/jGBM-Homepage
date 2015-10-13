@@ -28,6 +28,11 @@ var interactions = [
 	new ol.interaction.DragZoom(),
 	new ol.interaction.DragRotate(),
 ];
+
+
+var stadtgruppen = [
+	
+]
             
  var map = new ol.Map({
         target: 'stadtgruppenMap',
@@ -42,3 +47,57 @@ var interactions = [
         }),
 		interactions: interactions
       });
+      
+      
+
+
+// jQuery
+$(document).ready(function(){
+	// dropdown menu position
+	w = $('nav ul li ul').width()
+	breite = $(window).width();	
+	if(breite > 800){		
+		wpx = -w  + 120 + "px"
+		$('nav ul li ul').css('margin-left', wpx)
+	}
+	
+	
+	// localscroll
+	$("nav").localScroll();
+	
+	// fix menu bar on scroll
+	var nav = $('header');
+    $(window).scroll(function () {
+    	// only fix menu for monitors, not mobile
+    	breite = $(window).width();
+        if ($(this).scrollTop() > 1 & breite > 800) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
+    
+    
+    // mobile menu
+    $('#mobile-menu').click(function(){
+    	$('nav').toggle();
+    });
+
+});
+
+
+// scrolling of background images, fancy
+$(window).enllax();
+
+
+
+
+
+
+
+
+
+
+
+
+
