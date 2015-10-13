@@ -3,6 +3,19 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Muli Light'), local('Muli-Light'), url(https://fonts.gstatic.com/s/muli/v7/T-qN9Yh40TTJeenUALkjgg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli'), url(https://fonts.gstatic.com/s/muli/v7/z6c3Zzm51I2zB_Gi7146Bg.woff2) format('woff2');
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,9 +68,9 @@ body {
 	color: #1C1C1C
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto Slab', Arial, sans-serif;
+	font-family: "Muli";
 	margin: 12px 0 8px 0;
-	font-weight: bold;
+	font-weight: 700;
 }
 h1 {
 	font-size: 15pt;
