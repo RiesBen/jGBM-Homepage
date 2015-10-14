@@ -67,7 +67,7 @@ title {
 	}
 h1 {color: #4C4C4C; font-size: 3.5em; font-family: "Verdana", Arial; text-align: left; padding: 3% 2%;}
 h2 {color: #4C4C4C; font-size: 2.5em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
-p {color: #4C4C4C; font-size: 1.6em; font-family: "Verdana", Arial; padding: 1%;}
+p {color: #4C4C4C; font-size: 1.6em; font-family: "Verdana", Arial; padding: 1%; text-align:justify;}
 ol{ list-style:circle inside;}
 img {/*box-shadow:0.5px 0.5px 8px black; box-shadow: 0px 2px 10px black;*/}
 hr {color: #4C4C4C}
@@ -75,7 +75,7 @@ lh {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-alig
 /*Hyperlinks */
 a {color: #4C4C4C; font-size: 1.250em; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe"; text-decoration: underline;}
 a:hover {
-	color: #0000FF; 
+	color: #cc3731; 
 	font-size: 1.250em; 
 	font-family: "Verdana", Arial; 
 	title:"Link zur Stadtgruppe"; /*is this a new standart? Wont work in any browser, I suppose*/
@@ -89,21 +89,26 @@ a:active {
 
 /*ca {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}olors for text: #1A1A1A or #333333 or #4C4C4C*/
 
-	/*am ende Wieder Löschen:*/
+	/*am ende Wieder Löschen:
 div#voting{	border:15px;
 			border-style: solid solid solid solid;
 			border-color: #cc3731;
 			padding:0%;
 			margin:20%;
 			background-color: #FFFFFF;
-			overflow:hidden;}
+			overflow:hidden;}*/
+			
+			
+			
+			
 /*Navigations-Leiste -  nur für die Navigationsleiste. */
 nav.menu{ 	border: 0.5px #C8C8C8 ;
 			border-style: none none solid none;
 			box-shadow: 2px 1px 1px  #E0E0E0 ;
-			padding: 2% 0% 0% 0%;
+			padding: 10px 0px 0px 0px;
+			margin:0px;
 			background-color: #FFFFFF;
-			height:20%;
+			height:9%;
 			position:fixed;
 			top:0;
 			right:0;
@@ -112,7 +117,8 @@ nav.menu{ 	border: 0.5px #C8C8C8 ;
 			resize:none;}
 			
 	ul.menu{ 	position:absolute;
-				right:100%;
+				width: 70%;
+				right:7%;
 				top:40%;
 				resize:none;}
 				
@@ -120,28 +126,41 @@ nav.menu{ 	border: 0.5px #C8C8C8 ;
 					resize:none;}
 	
 	ul.menu li a {	background-color:; 
-					padding: 0px 20px ;
+					padding: 0% 1% ;
 					border-radius: 0;
-					
 					color:#4C4C4C;
 					font-weight:bold;
 				  	font-family: "Verdana", Arial, sans-serif;
-				  	font-size: 150%;
-				  	text-decoration: none;}
+				  	font-size: 1.3em;
+				  	text-decoration: none;
+					}
+					
+	ul.menu li a:hover {
+					color: #cc3731; 
+					font-size: 1.3em; 
+					font-family: "Verdana", Arial, sans-serif; 
+					}
 				  	
 	img.navigation {position: absolute;
-					left:30px;
-					top:20px;
+					left:8%;
+					top:10%;
 					margin:auto;
-					box-shadow:none}
+					box-shadow:none;
+					resize:none;}
+							
 					
-					
-					
-/*Content - Boxes: Enthalten den Inhalt der Seite*/
+/*Content - Boxes: Enthalten den Inhalt der Seite----------------------------------------------------------------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+[class*="col-"] {float: left;
+				padding: 15px;
+				border: 1px solid red;
+				}
 body {font-size:100%; }
 section {}
 article {}
-
 
  
 section.white {	background-color:#FFFFFE; 
@@ -165,21 +184,18 @@ section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
 	 				padding: 2%;
 	 				height: 100em;
 	 				color:white;}
-	section.darkRed p {color: white; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
-	section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
-
- section.text{ 	text-align:justify;
- 				}
+section.darkRed p {color: white; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
+section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
 
  /*different content boxes*/	
- div.content{	border:15px;
- 				border-style: none solid solid solid;
-				border-color: #cc3731;
-				padding:0%;
-				margin:0 10% 0 10%;
- 				background-color: #FFFFFF;
- 				overflow:hidden;
- 				box-shadow: 0px 0px 20px grey, 0px 0px 20px grey;}
+ div.content{border:15px;
+ 			border-style: none solid solid solid;
+			border-color: #cc3731;
+			padding:0%;
+			margin:0 10% 0 10%;
+ 			background-color: #FFFFFF;
+ 			overflow:hidden;
+ 			box-shadow: 0px 0px 20px grey, 0px 0px 20px grey;}
  				
 	img#slider {box-shadow:none;}
 	img#inter {position: relative;
@@ -190,22 +206,26 @@ section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
 				}
 
 /*Willkommen-page: mit Seiten elementen für nachrichten und login*/
+.row-1{top:50%}	
+.row-2{down:50%}
+.col-1{width: 40%}
+.col-2{width: 20%}
+.col-3{width: 70%}
 	section.willkommen{padding: 2% 2% 2% 2%;}
- 	aside.willkommen {float:right; padding: 0% 0% 0% 5%; resize:none;}
+ 	aside.willkommen {float:right;  resize:none;}
  	
  	h1.welcome{position: relative;
- 				width=20%;}
+ 				font-size: 2em;}
   	img.welcomeLogo{ position: relative;
 					max-width=100%;
 					height=auto;
-					float=left;
 					}
 	p.welcomeText{}
- 	form.login {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
+ 	form.login {background-color: hsl(0,70%,95%); /* or #FFEBE6 */
 				padding: 10px;
 				min-height: 8em;
 				width: 300px;
-				margin:10px;
+				margin: 1% 0%;
 				z-index: 1;
 				box-shadow:1px 1px 8px grey; resize:none;}	
   		
@@ -216,9 +236,9 @@ section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
 					
 	div.news {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */;
 			padding: 10px;
-			min-height: 38em;
+			min-height: 15em;
 			width: 300px;
-			margin:10px;
+			margin: 3% 0%	;
 			z-index: 1;
 			box-shadow:1px 1px 8px grey;}
   							
