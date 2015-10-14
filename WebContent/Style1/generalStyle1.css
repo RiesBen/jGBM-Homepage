@@ -1,0 +1,246 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*@CHARSET "UTF-8";*/
+
+/*	Unterteilt in:
+		- Homepage structure elemente
+		- Generelle Definitionen
+	Benutzen in : 
+		- Hauptseite
+		- Stadtgruppenseite (modifiziert vielleicht?) */
+
+
+/*Homepage Structure*/
+
+/*Navigations-Leiste -  nur für die Navigationsleiste. */
+nav.menu{ 	border:1px #999999 solid;
+			border-style: none none groove none;
+			padding: 10px 0 0px 0;
+			margin:0px;
+			background-color: #FFFFFF;
+			height:80px;
+			position:fixed;
+			top:0;
+			right:0;
+			left:0;
+			z-index: 10;
+			resize:none;}
+			
+	ul.menu{ 	position:absolute;
+				right:50px;
+				top:10px;
+				resize:none;}
+				
+	ul.menu li { 	display:inline;
+					resize:none;}
+	
+	ul.menu li a {	background-color:; 
+					padding: 0px 20px ;
+					border-radius: 0;
+					
+					color:#4C4C4C;
+					font-weight:bold;
+				  	font-family: "Verdana", Arial, sans-serif;
+				  	font-size: 1.8em;
+				  	text-decoration: none;
+				  	resize:none;}
+				  	
+	img.navigation {position: absolute;
+					left:30px;
+					top:20px;
+					margin:auto;
+					box-shadow:none}
+					
+					
+/*Content - Boxes: Enthalten den Inhalt der Seite*/
+body {font-size:100%; }
+section {}
+article {}
+
+
+ 
+section.white {	background-color:#FFFFFE; 
+			 	border: 1px;
+			 	border-style: none solid solid solid;
+			 	border-color:  #E6E6E6;;
+ 				padding: 2% 8%;
+ 				min-height: 50em;}	
+ 
+section.lightRed {	background-color: /*#FFFFFF*/  hsl(0,70%,95%); /* or #FFEBE6 */
+ 				 	border: 1px;
+				 	border-style: none solid solid solid;
+				 	border-color: #E6E6E6;
+	 				padding: 2% 8%;
+	 				min-height: 50em;}
+
+section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
+ 				 	border: 2px;
+				 	border-style: none solid solid solid;
+				 	border-color:  #E6E6E6;
+	 				padding: 2%;
+	 				height: 100em;
+	 				color:white;}
+	section.darkRed p {color: white; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
+	section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
+
+ section.text{ 	text-align:justify;
+ 				}
+
+ /*different content boxes*/	
+ div.content{	border:15px;
+ 				border-style: none solid solid solid;
+				border-color: #cc3731;
+				padding:0%;
+				margin:0 10% 0 10%;
+ 				background-color: #FFFFFF;
+ 				overflow:hidden;
+ 				box-shadow: 0px 0px 20px grey, 0px 0px 20px grey;}
+ 				
+	img#slider {box-shadow:none;}
+	img#inter {position: relative;
+				right:0;
+				left:0;
+				width:100%;	
+				box-shadow:none;
+				}
+
+/*Willkommen-page: mit Seiten elementen für nachrichten und login*/
+	section.willkommen{ padding: 2% 2% 10% 2%}
+ 	aside.willkommen {float:right;}
+ 	
+ 	form.login {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */
+				padding: 10px;
+				min-height: 8em;
+				width: 300px;
+				margin:10px;
+				z-index: 1;
+				box-shadow:1px 1px 8px grey;}	
+  		
+  		form.login p {color: #4C4C4C; font-size: 0.875em; font-family: "Verdana", Arial; text-align: left;}
+  		input#login-user {position:relative; left: 40px; width:100px;}
+  		input#login-password {position:relative; left: 40px; width:100px;}
+  		input#login-submit {position:relative; left: 40px;}
+  		
+	div.news {	background-color: hsl(0,70%,95%); /* or #FFEBE6 */;
+			padding: 10px;
+			min-height: 38em;
+			width: 300px;
+			margin:10px;
+			z-index: 1;
+			box-shadow:1px 1px 8px grey;}
+  							
+	newsheader{color: #4C4C4C; font-size: 0.875em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px;}
+	newscontent{color:#4C4C4C ; font-size: 0.667em; font-style:italic; font-family: "Verdana", Arial; text-align: left}	
+	 				
+
+section#stadtgruppen{}
+	div#locations {	min-height:450px;
+					marging: 30px;
+					padding: 30px;}
+	div#locations ol {	float:left;
+						padding: 10px 20px 0px 40px;}
+	div#googleMap{	float: right;
+					position:relative;
+					right: 300px;
+					top:50px;
+					width:25em;
+					height:25em;
+					box-shadow: 0px 2px 10px black;}
+								 				
+section.kontakt{ }		
+  
+ /*Footer-Box soll im rot verschwinden ;)^^*/
+footer{	padding:0px;
+		margin: 0px;
+		background-color: #cc3731;
+		min-height: 100px;
+		color:white;}}
+
+ 				
+  					
+
+/*General-Styles: Alles was generell für die ganze Seite gelten sollte.*/		
+title {
+	color: #4C4C4C; 
+	font-family: "Verdana", Arial; 
+	text-align: left
+	}
+h1 {color: #4C4C4C; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
+h2 {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
+p {color: #4C4C4C; font-size: 1.125em; font-family: "Verdana", Arial;}
+ol{ list-style:circle inside;}
+img {box-shadow:0.5px 0.5px 8px black; box-shadow: 0px 2px 10px black;}
+hr {color: #4C4C4C}
+lh {color: #4C4C4C; font-size: 1.600em; font-family: "Verdana", Arial; text-align: left; text-indent: 20px;}
+/*Hyperlinks */
+a {color: #4C4C4C; font-size: 1.250em; font-family: "Verdana", Arial; title:"Link zur Stadtgruppe"; text-decoration: underline;}
+a:hover {
+	color: #0000FF; 
+	font-size: 1.250em; 
+	font-family: "Verdana", Arial; 
+	title:"Link zur Stadtgruppe"; /*is this a new standart? Wont work in any browser, I suppose*/
+}
+a:active {
+	color: red;
+	font-size: 1.250em; 
+	font-family: "Verdana", Arial; 
+	title:"Link zur Stadtgruppe";
+}
+
+/*ca {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}olors for text: #1A1A1A or #333333 or #4C4C4C*/
+
+	/*am ende Wieder Löschen:*/
+div#voting{	border:15px;
+			border-style: solid solid solid solid;
+			border-color: #cc3731;
+			padding:0%;
+			margin:20%;
+			background-color: #FFFFFF;
+			overflow:hidden;}
