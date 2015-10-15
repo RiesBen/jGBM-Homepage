@@ -61,25 +61,6 @@ table {
 * {
 	box-sizing: border-box;
 	}
-[class*="col-"] {float: left;
-				padding: 0px;
-				position: relative;
-				border: 1px solid red;
-				width: 100%
-				}
-/*Colums:*/
-.col-1{width:100%;}
-.col-2{width:20%;}
-.col-3{width:29%;}
-		.col-3a{width: 29%; left:5%; float: right}
-.col-4{width:39%;}
-.col-5{width:49%;}
-	.col-5a{ width:50%; left:3%;}
-.col-6{width:60%;}
-.col-7{width:70%;}
-.col-1{width:80%;}
-.col-1{width:90%;}
-
 
 	
 
@@ -92,7 +73,7 @@ title {
 	}
 h1 {color: #4C4C4C; font-size: 3.0em; font-family: "Muli",Verdana, Arial; text-align: left; padding: 3% 2%;}
 h2 {color: #4C4C4C; font-size: 1.8em; font-family: "Muli",Verdana, Arial; text-align: left; text-indent: 20px; margin: 2px;}
-p {color: #4C4C4C; font-size: 1.2em; font-family: "Muli",Verdana, Arial; padding: 1%; text-align:justify;}
+p {color: #4C4C4C; font-size: 1.1em; font-family: "Muli",Verdana, Arial; padding: 1%; text-align:justify;  text-justify: inter-word; line-height: 130%;}
 p.quote{color: #989898; font-size: 1.8em; font-family: "Muli",Verdana, Arial; padding: 1% 3%; text-align:justify; font-style: italic;}
 ol{ list-style:circle inside url("../pictures/point.png");}
 img {/*box-shadow:0.5px 0.5px 8px black; box-shadow: 0px 2px 10px black;*/}
@@ -115,14 +96,6 @@ a:active {
 
 /*ca {color: #4C4C4C; font-size: 18px; font-family: "Verdana", Arial;}olors for text: #1A1A1A or #333333 or #4C4C4C*/
 
-	/*am ende Wieder Löschen:
-div#voting{	border:15px;
-			border-style: solid solid solid solid;
-			border-color: #cc3731;
-			padding:0%;
-			margin:20%;
-			background-color: #FFFFFF;
-			overflow:hidden;}*/
 			
 			
 			
@@ -178,18 +151,61 @@ nav.menu{ 	border: 0.5px #C8C8C8 ;
 
 
 body {font-size:100%; }
-section {}
+section {width:100%;
+			position: relative;}
 article {}
+[class*="col-"] {float: left;
+				position: relative;
+				border: 1px solid red;
+				width: 100%;
+				height: 100%;
+				margin: 2px;
+				text-justify: inter-word;
+				}
+/*Colums:*/
+.col-1{width: 99%;}
+	.col-1a{width: 98%;margin: 1%;}
+	.col-1H1{width:99%;  margin: 0px 0px 12px 0px;}
+	.col-1aH2{ width:100%; left:3%; margin: 0px 0px 20px 0px;}
+.col-2{width:20%;}
+		.col-2a{width: 19%; float:right; left:-3%}
+.col-3{width:29%;}
+		.col-3a{width: 29%;  float: right;}
+		.col-3down{width: 29%;  float: right; top: 60px;}
+		.col-3side{width: 29%;height:80%; float: right;}
+		.col-3ap1{width: 29%;  float: right; margin: 15px 0px 0px 0px;}
+		.col-3con1{width: 29%;  left: 3%}
+		.col-3con2{width: 29%;  left: 6%}
+		.col-3con3{width: 29%;  left: 9%}
+
+.col-4{width:40%;}
+	.col-4a{ width:40%; left:6%;}
+	.col-4b{ width:40%; left:15%;}
+	.col-4c{ width:39%; float:right;}
+	.col-4aH2{ width:40%; left:6%; margin: 0px 0px 8px 0px;}
+	.col-4bH2{ width:40%; left:15%; margin: 0px 0px 8px 0px;}
+	.col-4ap1{width: 39%;  float: right; margin: 15px 0px 0px 0px;}
+.col-5{width:49%;}
+	.col-5a{ width:49%; left:1%;}
+.col-6{width:60%;}
+.col-7{width:69%;}
+	.col-7H1{width:70%;  margin: 0px 0px 12px 0px;}
+.col-75{width:75%;}
+.col-8{width:80%;}
+.col-85{width:80%;}
+.col-9{width:90%;}
+.col-95{width:95%;}
+	.col-95a{width:95%; margin: 1% 2%;}
+
 
  
 section.white {	background-color:#FFFFFE;
- 				padding: 3% 6%;
- 				height:120%;
- 				min-height: 30em;}	
+ 				min-height: 50em;
+ 				width: 100%;}	
  
 section.lightRed {	background-color: /*#FFFFFF*/  hsl(0,70%,95%); /* or #FFEBE6 */
-	 				padding: 3% 3%;
-	 				min-height: 50em;}
+ 					min-height: 50em;
+ 					width: 100%;}
 
 section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
  				 	border: 2px;
@@ -198,8 +214,13 @@ section.darkRed {	background-color: hsl(0,80%,55%); /* or #FFEBE6 */
 	 				padding: 2%;
 	 				height: 100em;
 	 				color:white;}
+
+
 section.darkRed p {color: white; font-size: 1.125em; font-family: "Verdana", Arial;text-indent: 20px;}
 section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Arial; text-align: left}
+
+
+
 
  /*different content boxes*/	
  div.content{border:15px;
@@ -220,13 +241,7 @@ section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Ar
 				}
 
 /*Willkommen-page: mit Seiten elementen für nachrichten und login*/
-.row-1{top:0}	
-.row-2{top:80%}
-.col-1{width: 70%}
-.col-2{width: 30%}
-.col-3{width: 70%}
 
-section.willkommen{padding: 2% 1% 2% 1%;}
 aside.willkommen {position: relative; top: 0px; width: 30%; float:right;  resize:none;} /*"muss noch höher!*/
  	h1.welcome{position: relative;
  				font-size: 3.5em;
@@ -235,20 +250,23 @@ aside.willkommen {position: relative; top: 0px; width: 30%; float:right;  resize
 					width: 100%;
 					}
 	img.welcomePic{position: relative;
-					width: 100%;
-					margin: 1.5%;}
+
+					margin: 3% 1.5%;}
 	
 	p.welcomeText{}
 	
  	form.login {position:relative;
  				background-color: hsl(0,70%,95%); /* or #FFEBE6 */
-				padding: 10px;
+				padding: 9px;
 				min-height: 8em;
 				width: 300px;
-				margin: 1% 0%;
 				z-index: 1;
-				box-shadow:1px 1px 8px grey; resize:none;
-				left: 13%;}	
+				border: 1px;
+				 border-style: solid solid solid solid;
+				 border-color:  	#808080;
+				resize:none;
+				margin: 10px 20px;
+}	
   		
   		form.login p {color: #4C4C4C; font-size: 1.5em; font-family: "Verdana", Arial; text-align: left; padding: 5%}
   		input#login-user {position:relative; left: 40px; width:100px;}
@@ -258,12 +276,15 @@ aside.willkommen {position: relative; top: 0px; width: 30%; float:right;  resize
 	div.news {position:relative;
 			background-color: hsl(0,70%,95%); /* or #FFEBE6 */;
 			padding: 10px;
-			min-height: 15em;
+			margin: 20px 20px;
+			min-height: 30em;
 			width: 300px;
-			margin: 3% 0%	;
+			border: 1px;
+			border-style: solid solid solid solid;
+			border-color:  	#808080;
 			z-index: 1;
-			box-shadow:1px 1px 8px grey;
-			left: 13%;}
+			top: 50%;
+			}
   							
 	newsheader{color: #4C4C4C; font-size: 1.5em; font-style:bold; font-family: "Verdana", Arial; text-align: left; line-height: 30px; margin: 5% 5%;}
 	newscontent{color:#4C4C4C ; font-size: 1.0em; font-style:italic; font-family: "Verdana", Arial; text-align: left; padding: 2%}	
@@ -276,12 +297,6 @@ aside.willkommen {position: relative; top: 0px; width: 30%; float:right;  resize
 img.sprecher{}
 
 /*-------------------Die Stadtgruppen-Section--------------------------------------------*/
-.col-8{}
-	.col-8a{width:100%;}
-	.col-8b{width:70%;}
-		.col-8ba{width:50%;}
-	.col-8c{width: 30%;
-			float: right;}
 section#stadtgruppen{}
 	div#locations {	marging: ;
 					padding: 30px;}
@@ -296,15 +311,9 @@ li.advantage{ font-size: 1.5em;  margin:0 20px 20px 0; vertical-align:top}
 
 
 /*-------------------Die Mitglied-Section---------------siehe oben!---------------------*/
-.col-9{}
-	.col-9a{width:100%;}
-	.col-9b{width:60%;}
-	.col-9c{width: 0%;
-			float: right;}
 			
 /*-------------------Die Kontakt-Section---------------siehe oben!---------------------*/
 section.kontakt{ }		
-.col-10{width:10%;}
  /*Footer-Box soll im rot verschwinden ;)^^*/
 footer{	padding:0px;
 		margin: 0px;
