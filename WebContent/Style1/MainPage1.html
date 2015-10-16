@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>junior GBM</title>
+
+<!-- Meta-Info-->
+<meta name="author" content="Paul Saary und Benjamin Schroeder">
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Element Definitionen (HTML5) -->
+<script>
+	document.createElement("newsheader")
+	document.createElement("newscontent")
+</script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+
+ function initialize() {
+
+	var mycenter= new google.maps.LatLng(51.5,9.8);
+	
+	//mapeinstellung
+   var mapProp = {
+     center:mycenter,
+     //minimalisierter Zoom
+     zoomControl:true,
+     zoomControlOptions: {
+       style:google.maps.ZoomControlStyle.SMALL
+     },
+     //blendet Müll aus:
+     panControl:false,
+     streetViewControl:false,
+     
+     zoom:5,
+     mapTypeId:google.maps.MapTypeId.ROADMAP
+   };
+   
+   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+   
+   //All jgbm-Positions
+   var jgbmhamburg=new google.maps.LatLng(53.33,10.0);
+   var jgbmmarburg=new google.maps.LatLng(50.48,8.46);
+   var jgbmheidelberg=new google.maps.LatLng(49.25,8.3);
+   var jgbmtuebingen= new google.maps.LatLng(48.31,9.3);
+   
+   //all markers
+   var markerhamburg=new google.maps.Marker({
+	   position:jgbmhamburg,}); 
+   var markermarburg=new google.maps.Marker({
+	   position:jgbmmarburg,});
+   var markerheidelberg=new google.maps.Marker({
+	   position:jgbmheidelberg,});
+   var markertuebingen=new google.maps.Marker({
+	   position:jgbmtuebingen,});
+   
+   //set all markers
+	 markerhamburg.setMap(map);
+	 markermarburg.setMap(map);
+	 markerheidelberg.setMap(map);
+	 markertuebingen.setMap(map);
+	 
+	   //Links
+
+   
+   //all info Tags
+   var infowindowHH = new google.maps.InfoWindow({
+	   content:"junior GBM Hamburg"});
+   var infowindowHD = new google.maps.InfoWindow({
+	   content:"junior GBM Heidelberg"});
+   var infowindowMR = new google.maps.InfoWindow({
+	   content:"junior GBM Marburg"});
+   var infowindowTue = new google.maps.InfoWindow({
+	   content:"junior GBM Tübingen"});
+
+
+
+	 
+	//events
+	 google.maps.event.addListener(markerhamburg, 'click', function() {
+		 infowindowHH.open(map,markerhamburg)});
+	 google.maps.event.addListener(markermarburg, 'click', function() {
+		 infowindowMR.open(map,markermarburg)});
+	 google.maps.event.addListener(markertuebingen, 'click', function() {
+		 infowindowTue.open(map,markertuebingen)});
+	 google.maps.event.addListener(markerheidelberg, 'click', function() {
+		 infowindowHD.open(map,markerheidelberg)});
+	 
+//pan back
+	 google.maps.event.addListener(map,'center_changed',function() {
+		  window.setTimeout(function() {
+		    map.panTo(mycenter);
+		  },1);
+		  });
+ }
+ google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+		
+
+<!-- Stylesheet Einbindung-->
+<link href="../generalStyle.css" rel="stylesheet" type="text/css" />
+<link REL="SHORTCUT ICON" HREF="../pictures/jGBM-logo-fav.bmp">
+</head>
+
+
+<body>
+	<!-- Navigations-leiste  -->
+	<nav class="menu">
+		<img src="../pictures/jGBM-logo.jpg" class="navigation" width=140px;
+			height=auto; alt="logo">
+
+		<ul class="menu">
+			<li><a href="#willkommen" title="Willkommen">Willkommen</a></li>
+			<li><a href="#jGBM" title="Die junior GBM">Die Junior GBM</a></li>
+			<li><a href="#Stadtgruppen" title="Die Stadtgruppen">Die
+					Stadtgruppen</a></li>
+			<li><a href="#Mitglied" title="Mitglied werden?">Mitglied
+					werden?</a></li>
+			<li><a href="#Galerie" title="Galerie">Galerie</a></li>
+			<li><a href="#Kontakt" title="Kontakt">Kontakt</a></li>
+		</ul>
+	</nav>
+
+	<!--Content: ab hier startet der Inhalt der Homepage -->
+
+	<div class="content">
+	<a name="willkommen"></a>
+			<img ID="slider" src="../pictures/sliderDummy.jpg" width=100%
+			alt="Slider-Dummy">
+		<!-- Willkommen-Teil -->
+		<section class="white willkommen">
+			
+			<aside class="willkommen">
+				<form class="login">
+					<p>Mitglieder-login</p>
+					<input ID="login-user" type="text" name="name" value="name"><br>
+					<input ID="login-password" type="password" name="password"
+						value="password"> 
+					<input ID="login-submit" type="submit" value="Login">
+				</form>
+				<div class="news">
+					<!-- not working??? -->
+					<newsheader>Veranstaltung1<br />
+					</newsheader>
+					<newscontent> am: so und so vielten <br />
+					wo: in niemandshausen<br />
+					</newscontent>
+					<newsheader>Veranstaltung2<br />
+					</newsheader>
+					<newscontent> am: so und so vielten <br />
+					wo: in niemandshausen<br />
+					</newscontent>
+				</div>
+			</aside>
+
+			<section class="text">
+				<h1>Willkommen auf der jGBM-Homepage</h1>
+				<p>Lalalaafölakbh Lorem ipsum dolor sit amet, consetetur
+					sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+					et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+					accusam et justo duo dolores et ea rebum. Stet clita kasd
+					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+					erat, sed diam voluptua. At vero eos et accusam et justo duo
+					dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+				</p>
+			</section>
+		</section>
+
+		
+
+		<!-- Die junio GBM-Teil -->
+		<a	name="jGBM"></a>
+		<img id="inter"  src="../pictures/500.jpg" alt="inter">
+		<section class="lightRed">
+			<section class="text">
+				<h1>Die junior GBM</h1>
+				<p>Lalalaafölakbh Lorem ipsum dolor sit amet, consetetur
+					sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+					et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+					accusam et justo duo dolores et ea rebum. Stet clita kasd
+					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+					<h2>Die Sprecher</h2>
+					<p>Lalalaafölakbh Lorem ipsum dolor sit amet, consetetur
+					sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+					et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+					accusam et justo duo dolores et ea rebum. Stet clita kasd
+					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+			</section>
+			<img src="../pictures/bundesSprecher.jpg" width=60%>
+		</section>
+
+		<!--Die Stadtgruppen -->
+		<a name="Stadtgruppen"></a>
+		<img id="inter" src="../pictures/538.jpg" alt="bild" >
+		<section class="white" id="stadtgruppen">
+			<section class="text">
+				<h1>Die Stadtgruppen</h1>
+				<img src="dummy" alt="dummy" width="110" height="110">
+				<p>Lalalaafölakbh Lorem ipsum dolor sit amet, consetetur
+					sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+					et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+					accusam et justo duo dolores et ea rebum. Stet clita kasd
+					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+			</section>
+			<div id="locations">
+				<ol>
+				<lh> Die Stadtgruppen:<br></lh>
+					<li><a id="linktue" href="group_Tuebingen.html" title="Link zur Stadtgruppe">Hamburg</a></li>
+					<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Marburg</a></li>
+					<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Heidelburg</a></li>
+					<li><a href="group_Tuebingen.html" title="Link zur Stadtgruppe">Tüburg</a></li>
+				</ol>
+				<div id="googleMap"></div>
+			</div>
+		</section>
+
+	
+		<!-- Mitglied werden? Teil -->
+		<a name="Mitglied"></a>
+		<img id="inter"  src="../pictures/498.jpg" alt="willkommens-bild">
+		<section class="lightRed">
+			<section class="text">
+				<h1>Mitglied werden?</h1>
+				<p>Lalalaafölakbh Lorem ipsum dolor sit amet, consetetur
+					sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+					et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+					accusam et justo duo dolores et ea rebum. Stet clita kasd
+					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+			</section>
+			<img src="" alt="hier ein bildelein" height=250 width=250 />
+		</section>
+
+		<!-- Galerie Teil -->
+		<section class="white">
+			<a name="Galerie"></a>
+			<img id="inter"  src="../pictures/537.jpg" alt="willkommens-bild">
+			<section class="text">
+				<h1>Galerie</h1>
+				<p>Hier werden unsere neusten Bilder hinterlegt! Mehr gibts im
+					Archiv!</p>
+			</section>
+			<a href="dummy">mehr</a>
+		</section>
+		
+		<!-- Kontakt-Teil -->
+		<a name="Kontakt"></a>
+		<img id="inter"  src="../pictures/499.jpg" alt="willkommens-bild">
+		<section class="lightRed">
+
+			<section class="text">
+				<h1>Kontakt</h1>
+				<p>
+					E-mail: xxxxxxxxx <br> oder über facebook:<br>
+				</p>
+			</section>
+			<a href="https://www.facebook.com/JuniorGBM?fref=ts"><img
+				src="../pictures/facebook.jpg" width="30px"></a>
+
+		</section>
+
+		<!-- Fussnote - Impressum -Teil -->
+		<footer> Impressum: Lalalaafölakbh Lorem ipsum dolor sit
+			amet, consetetur sadipscing elitr, sed dia </footer>
+	</div>
+</body>
+</html>
