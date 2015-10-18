@@ -14,7 +14,15 @@
 	document.createElement("newscontent")
 </script>
 
-
+<!--  Aditional Packages: -->
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/OpenLayers.js" type="text/javascript"></script>
+		<script src="js/jquery.enllax.min.js" type="text/javascript"></script>
+		<script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+		<script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
+		<script src="js/makefixed.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		
 <!-- googleMAPS -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 
@@ -103,20 +111,20 @@
 
 <!-- Stylesheet Einbindung----------------------------------------------------------------------------------------------------->
 <link href="generalStyle1a.css" rel="stylesheet" type="text/css" />
-<link REL="SHORTCUT ICON" HREF="../pictures/jGBM-logo-fav.bmp">
+<link REL="SHORTCUT ICON" HREF="../img/jGBM-logo-fav.bmp">
 </head>
 
 
 <body>
 	<!-- Navigations-leiste  -->
 	<nav class="menu">
-		<img src="../pictures/Logo_junior_gbm.png" class="navigation" width=140px;
-			height=auto; alt="logo">
+		<a href="#willkommen"><img src="img/Logo_junior_gbm.png" class="navigation" width=140px;
+			height=auto; alt="logo"></a>
 
 		<ul class="menu">
 			<li><a href="#willkommen" title="Willkommen">Willkommen</a></li>
 			<li><a href="#jGBM" title="Die junior GBM">Die Junior GBM</a></li>
-			<li><a href="#Die Sprecher" title="Die Sprecher">Die Sprecher</a></li>
+			<li><a href="#DieSprecher" title="Die Sprecher">Die Sprecher</a></li>
 			<li><a href="#Stadtgruppen" title="Die Stadtgruppen">Die
 					Stadtgruppen</a></li>
 			<li><a href="#Mitglied" title="Mitglied werden?">Mitglied werden?</a></li>
@@ -125,26 +133,24 @@
 	</nav>
 
 	<!--Content: ab hier startet der Inhalt der Homepage -->
-
-	<div class="content">
 		<a name="willkommen"></a>
-		<img ID="slider" src="../pictures/sliderDummy.jpg" width=100%; alt="Slider-Dummy";>
+		<div class="content">
+		<img ID="slider" src="img/sliderDummy.jpg" width=100%; alt="Slider-Dummy";>
 		<!-- Willkommen-Teil -->
 
-		<section class="white ">
+		<section class="white willkommen">
 			<div id="Content">
 				<div class="col-1a">
-
-						<div class="col-7">
+						<div class="col-7H1">
 							<h1 class="welcome" >Willkommen auf der jGBM-Homepage </h1> 
 						</div>
 						<div class="col-3ap1">
-							<img class="welcomeLogo "  src="../pictures/Logo_junior_gbm.png" alt="WelcomeLogo">
+							<img class="welcomeLogo "  src="img/Logo_junior_gbm.png" alt="WelcomeLogo">
 		
 					</div>
-					<div class="col-7">
+					<div class="col-6a">
 						<p class="welcomeText">
-							Willkommen auf der Seite der juniorGBM, der Studierendenorganisation der Gesellschaft für Biochemie und Molekularbiologie e.v. (GBM). <br/> <br/>
+							Willkommen auf der Seite der juniorGBM, der Studierendenorganisation der Gesellschaft für Biochemie und Molekularbiologie e.v. (GBM). <br/>
 							Auf dieser Seite findet ihr Informationen über die juniorGBM, unsere Veranstaltungen, die lokal organisierten Stadtgruppen und darüber, wie man der juniorGBM beintritt. 
 						</p>
 					</div>
@@ -171,7 +177,7 @@
 								</newscontent>
 						</div>
 					</div>
-					<img class="welcome col-7"  src="../pictures/willkommen.jpg" alt="WelcomeLogo" height=200>
+					<img class="welcomePic "  src="img/willkommen.jpg" alt="WelcomeLogo" >
 				</div>
 			</div>
 		</section>
@@ -180,12 +186,12 @@
 
 		<!-- Die junio GBM-Teil -->
 
-		<img id="inter"  src="../pictures/500.jpg" alt="inter">
-		<a	name="jGBM"></a>
-		<section class="lightRed">
+		<div class="inter" id="inter1" data-enllax-ratio="0.3" >	<a	name="jGBM"></a></div>
+	
+		<section class="lightRed jGBM">
 			<div class="col-1a">
 				<h1 class="col-7H1">Die junior GBM</h1>
-				<p class= "col-5">
+				<p class= "col-4a">
 					Unter dem Dachverband der Gesellschaft der Biochemie und Molekularbiologie e.V. (GBM) entstand 2012 die Junior GBM. <br/><br/>
 					Die GBM hat es sich zur Aufgabe genommen den Austausch in den Biowissenschaften auf dem Feld der Biochemie, Molekularbiologie und molekularen Medizin durch Tagungen und Konferenzen zu unterstützen und den wissenschaftlichen Nachwuchs zu fördern.
 					Bestehende Mitglieder der GBM haben sich erfolgreich zu führenden Spitzenwissenschaftlern und Nobelpreisträgern etabliert(entwickelt?) und möchten ihre Erfahrung mit den aufstrebenden und engagierten Studenten teilen. 
@@ -196,10 +202,10 @@
 					Durch Beteiligung der GBM an vielen Messen und weiteren Konferenzen erhalten die Nachwuchswissenschaftler Zugang zu beispielsweise der ANALYTICA Konferenz 
 				</p>
 				<div class="sepBox"></div>
-				<p class="quote col-5a">
+				<p class="quote col-4ab">
 						<br/>"Über den Tellerand blicken!"<br/>
 				</p>
-				<p class="col-5a">
+				<p class="col-4ab">
 					und der Biotechnica und knüpfen erste Kontakte für einen erleichterten Berufseinstieg.
 					Besondere Leistungen werden durch die Vergabe von Preisen und Auszeichnungen von der GBM anerkannt. <br/>
 					Das Ziel ist es die Junior GBM Stadtgruppen stärker miteinander zu vernetzen und bundesweite Veranstaltungen wie das Junior GBM Sommersymposium zu etablieren. Durch den Austausch und Vernetzung der Jungmitglieder werden Erfahrungen zu Veranstaltungen, 
@@ -207,20 +213,19 @@
 					Alle Nachwuchswissenschaftler bis zum 32. Lebensalter finden im neugegründeten Arbeitskreis "Young Investigators" einen Anker, um sich über die Herausforderungen auszutauschen, denen man sich als angehender Arbeitsgruppenleiter stellen muss. Dies ist eine Möglichkeit Kontakte ins deutsche Forschungsumfeld zu knüpfen, Arbeiten zu präsentieren und Kollaboration entstehen zu lassen. 
 				</p>
 			</div>
-
-				<!-- Die Sprecher-->
-		<img id="inter"  src="../pictures/500.jpg" alt="inter">
-		<a	name="Die Sprecher"></a>
 		</section>
-		<section class="white">
-			<div class="col-95a">
-				<div class="col-95a">
+				<!-- Die Sprecher-->
+
+		<div class="inter" id="inter2" data-enllax-ratio="0.3" ><a name="DieSprecher"></a></div>
+		
+		<section class="white sprecher">
+			<div class="col-1a">
+				<div class="col-1b">
 					<h1 class="col-7H1">Die Sprecher </h1> 
-		 			<img class="sprecher col-3a " src="../pictures/bundesSprecher.jpg" >	
-					<p class="col-7">
+		 			<img class="sprecher col-3pic " src="img/bundesSprecher.jpg" >	
+					<p class="col-6a">
 						Als Bundessprecher werden von der Mitgliederversammlung auf dem Mosbacher Kolloquium jedes Jahr zwei gleichberechtigte Sprecher gewählt. Seit März 2015 sind Michaela Morlock und Hendrik Schöneborn im Amt. Wir verstehen wir uns als Ansprechpartner für Stadtgruppensprecher, JGBM-Mitglieder und Interessierte. Zwischen der GBM und ihren Organen stellen wir den Knotenpunkt zur der Junior GBM dar. Als weitere Aufgabe bauen wird die Kommunikation zu ähnlichen Organisationen im In- und Ausland auf.
 		 			</p>
-
 				</div>
 				<h2 class="col-4aH2">
 					Michaela Morlock
@@ -249,16 +254,18 @@
 		</section>
 
 		<!--Die Stadtgruppen -->
-		<img id="inter" src="../pictures/538.jpg" alt="bild" >
-		<a name="Stadtgruppen"></a>
+		
+		<div class="inter" id="inter3" data-enllax-ratio="0.3" ><a name="Stadtgruppen"></a></div>
+
 		<section class="lightRed" id="stadtgruppen">
 			<div class="col-1a">
 				<h1 class="col-7H1">Die Stadtgruppen</h1>
-				<p class="col-1">Inzwischen gibt es bundesweit über 22 Stadtgruppen, die sich regelmäßig treffen und gemeinsam Veranstaltungen organisieren. <br/><br/>
-					Informationen über die einzelnen Stadtgruppen und ihre Veranstaltungen, sowie die Möglichkeit Kontakt zu den Stadtgruppen aufzunehmen findet ihr auf den folgenden Seiten. <br/><br/>
+				<p class="col-6a">Inzwischen gibt es bundesweit über 22 Stadtgruppen, die sich regelmäßig treffen und gemeinsam Veranstaltungen organisieren. 
+					Informationen über die einzelnen Stadtgruppen und ihre Veranstaltungen, sowie die Möglichkeit Kontakt zu den Stadtgruppen aufzunehmen findet ihr auf den folgenden Seiten. <br/>
 					Falls für eure Stadt noch keine Stadtgruppe existiert, erfahrt ihr in diesem Leitfaden (Link), wie ihr eine neue Stadtgruppe gründet.
 					Stadt A Stadt B Stadt etc. 
 				</p>
+				<div class="col-1">
 				<div id="googleMap" class="col-4c"></div>
 				<div id="locations" class="col-6">
 					<h2> Die Stadtgruppen:</h2>
@@ -298,25 +305,27 @@
 					</div>
 				</div>
 			</div>
+			</div>
 		</section>
 
 	
 		<!-- Mitglied werden? Teil -->
-		<a name="Mitglied"></a>
-		<img id="inter"  src="../pictures/498.jpg" alt="willkommens-bild">
-		<section class="white">
+		
+		<div class="inter" id="inter4" data-enllax-ratio="0.3" ><a name="Mitglied"></a></div>
+		<section class="white Mitglied">
 			<div class="col-1a">
 				<h1 class="col-7H1"> Mitglied werden?</h1>
-				<p class="col-1">Um Mitglied zu werden müsst ihr einfach diesen Mitgliedsantrag ausfüllen und an die Geschäftsstelle der GBM der GBM senden.
+				<p class="col-6a">Um Mitglied zu werden müsst ihr einfach diesen Mitgliedsantrag ausfüllen und an die Geschäftsstelle der GBM der GBM senden.
 				Die Adresse befindet sich auf dem Formular. Was kostet die Mitgliedschaft? <br/>
 				Die Mitgliedschaft kostet 25 Euro für Studenten und 30 Euro für Doktoranden bis zu vollendeten 30. Lebensjahr. <br/>
 				Welche Vorteile bietet eine Mitgliedschaft?<br/>
 				</p>
 				
-				<div class="col-7">
-					<h2> Vorteile:</h2>
+
+					<h2 class="col-4aH2a"> Vorteile:</h2>
+					<div class="col-1c">
 						<ol>
-						<lh> <br/></lh>
+						<lh> </lh>
 							<li class="advantage">Geringe Teilnahmekosten für die Symposien der GBM </li>
 							<li class="advantage">Fahrkostenzuschuss für Tagungen der GBM, FEBS und</li>
 							<li class="advantage">7x jährlich Biospektrum</li>
@@ -324,39 +333,39 @@
 							<li class="advantage">Möglichkeit sich einer Stadtgruppe anzuschließen und selbst aktiv zu werden</li>
 						</ol>
 				</div>
-				<img class="col-3down" src="../pictures/bundesSprecher(5).jpg" alt="hier ein bildelein" height=250 width=250 />
-				
-			</div>
+				</div>				
 	</section>
 		
 		<!-- Kontakt-Teil -->
-		<a name="Kontakt"></a>
-		<img id="inter"  src="../pictures/499.jpg" alt="willkommens-bild">
-		<section class="lightRed">
+		
+		<div class="inter" id="inter5" data-enllax-ratio="0.3" ><a name="Kontakt"></a></div>
+		<section class="lightRed kontakt">
 			<div class="col-1a">
 				<div class="col-1H1">
 					<h1>Kontakt</h1>
 				</div>
-				<div class="col-3con1">	
-					<h2 class="col-1aH2">Die jGBM</h2>
-					<div class="col-1">
-						<a class="col-3" href="https://www.facebook.com/JuniorGBM?fref=ts" target="_blank"><img src="../pictures/facebook.jpg" width="60px"></a>
-						<a class="col-3"  href="https://twitter.com/juniorgbm" title="Link zur Twitter" target="_blank"><img src="../pictures/twitter-logo.jpg" width="60px"></a>
-						<a class="col-3" href="" title="Link zur Twitter" target="_blank"><img src="../pictures/mail.png" width="60px"></a> <br/><br/><br/>
+				<div>
+					<div class="col-3con1">	
+						<h2 class="col-1aH2">Die jGBM</h2>
+						<div class="col-1">
+							<a class="col-3" href="https://www.facebook.com/JuniorGBM?fref=ts" target="_blank"><img src="img/facebook.jpg" width="60px"></a>
+							<a class="col-3"  href="https://twitter.com/juniorgbm" title="Link zur Twitter" target="_blank"><img src="img/twitter-logo.png" width="60px"></a>
+							<a class="col-3" href="" title="Link zur Twitter" target="_blank"><img src="img/mail.png" width="60px"></a> <br/><br/><br/>
+						</div>
 					</div>
-				</div>
-				<div class="col-3con2">	
-					<h2 class="col-1aH2">Die Stadtgruppen</h2>
-					<div class="col-1">
-						<p> Die Facebookseiten der Stadtgruppen findet ihr auf ihren jeweiligen Unterseiten <br/><br/>
-						Die Mailadressen der Stadtgruppen findet ihr auf ihren jeweiligen Unterseite.
-						</p>
+					<div class="col-3con2">	
+						<h2 class="col-1aH2">Die Stadtgruppen</h2>
+						<div class="col-9">
+							<p> Die Facebookseiten der Stadtgruppen findet ihr auf ihren jeweiligen Unterseiten <br/><br/>
+							Die Mailadressen der Stadtgruppen findet ihr auf ihren jeweiligen Unterseite.
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="col-3con3">	
-					<h2 class="col-1aH2">Die GBM:</h2>
-					<div class="col-1">
-						<p> Hier gehts zur Homepage der GBM: <a href="http://gbm-online.de/" title="Link zur GBM">gbm-online.de  </a> <br/> </p>
+					<div class="col-3con3">	
+						<h2 class="col-1aH2">Die GBM:</h2>
+						<div class="col-9">
+							<p> Hier gehts zur Homepage der GBM: <a href="http://gbm-online.de/" title="Link zur GBM">gbm-online.de  </a> <br/> </p>
+						</div>
 					</div>
 				</div>
 
@@ -364,7 +373,11 @@
 		</section>
 
 		<!-- Fussnote - Impressum -Teil -->
-		<footer> blablabla, muss eig. nur Tino drüber schauen www.junior-gbm.de ist der Internetauftritt der Juniorgruppe der Gesellschaft für Biochemie und Molekularbiologie (GBM) e.V. 
+		<footer> 
+			<div class="col-1a">
+				<h3>Impressum:</h3>
+			<p class="footer col-1">
+			blablabla, muss eig. nur Tino drüber schauen www.junior-gbm.de ist der Internetauftritt der Juniorgruppe der Gesellschaft für Biochemie und Molekularbiologie (GBM) e.V. 
 			Die GBM ist als gemeinnützige wissenschaftliche Fachgesellschaft unter Nummer 4265 in das Vereinsregister der Stadt Frankfurt am Main eingetragen.<br/>
 			Die GBM dient gemäß Bescheinigung des Finanzamtes Frankfurt/Main III vom 18. Oktober 2006 (Steuernummer 045 250 79314) ausschließlich und unmittelbar gemeinnützigen,
 			insbesondere wegen der Förderung der Biochemie und Molekularbiologie, wissenschaftlichen Zwecken und ist somit zu den in § 4, Abs. 1, Ziffer 6 KStG, in § 3, Abs. 1, Ziffer 6 VStG und in § 3, Ziffer 6 GewStG bezeichneten Körperschaften, 
@@ -376,7 +389,9 @@
 			Dennoch macht sich die GBM weder diese Websites noch deren Inhalte zu eigen. Wir sind nicht verantwortlich für die Inhalte dieser Seiten oder die Verfügbarkeit dieser Websites. 
 			Hyperlink-Verknüpfungen zu diesen Websites erfolgen auf eigenes Risiko des Nutzers. Das Copyright für von der GBM veröffentlichte und selbst erstellte Seiten und darin enthaltene Objekte bleibt bei der GBM. 
 			Eine Vervielfältigung oder Verwendung der Abbildungen und Texte in anderen Publikationen ist nur mit ausdrücklicher Zustimmung der GBM gestattet. --> Mit GBM absprechen 
-</footer>
+			</p>
+			</div>
+		</footer>
 	</div>
 </body>
 

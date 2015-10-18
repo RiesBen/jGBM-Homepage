@@ -8,6 +8,15 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!--  Aditional Packages: -->
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/OpenLayers.js" type="text/javascript"></script>
+		<script src="js/jquery.enllax.min.js" type="text/javascript"></script>
+		<script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+		<script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
+		<script src="js/makefixed.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		
 
 <!-- Element Definitionen (HTML5) -->
 <script>
@@ -17,50 +26,52 @@
 
 <!-- Stylesheet Einbindung-->
 <link href="generalStyle1a.css" rel="stylesheet" type="text/css" />
-<link REL="SHORTCUT ICON" HREF="../pictures/jGBM-logo-tü-fav.bmp">
+<link REL="SHORTCUT ICON" HREF="img/jGBM-logo-tü-fav.bmp">
 </head>
 
 
 <body>
 	<!-- Navigations-leiste  -->
 	<nav class="menu">
-		<img src="../pictures/Logo_junior_gbm_tübingen.png" class="navigation"
-			width=140px; height=auto; alt="logo">
+		<a href="#willkommen"><img src="img/Logo_junior_gbm_tübingen.png" class="naviStadt"
+			width=140px; height=auto; alt="logo"></a>
 
-		<ul class="menu">
-			<li><a href="MainPage1.html" title="Zurück zur jGBM">Zurück
+		<ul class="menu" id="stadt">
+			<li><a href="index.html" title="Zurück zur jGBM">Zurück
 					zur jGBM</a></li>
 			<li><a href="#willkommen"
 				title="Willkommen bei der jGBM Tübingen">Willkommen bei der jGBM
 					Tübingen</a></li>
 			<li><a href="#programm" title="Die Stadtgruppen">Semesterprogramm</a></li>
-			<li><a href="#aktivität" title="Aktivität">Aktivität</a></li>
+			<li><a href="#aktivitaet" title="Aktivitaet">Aktivität</a></li>
 			<li><a href="#galerie" title="Galerie">Galerie</a></li>
 			<li><a href="#kontakt" title="Kontakt">Kontakt</a></li>
 		</ul>
 	</nav>
 
 	<!--Content: ab hier startet der Inhalt der Homepage -->
+		<a name="willkommen"></a>	
 	<div class="content">
-		<img ID="slider" src="../pictures/sliderDummytue.png" width=100%>
+	
+		<img ID="slider" src="img/sliderDummytue.png" width=100%>
 		<!-- Willkommen-Teil -->
 		<section class="white willkommen">
-			<a name="willkommen"></a>
-				<div class="col-1">
-					<h1 class="welcome">Willkommen bei der jGBM Tübingen</h1>
+				<div class="col-1a">
+				<div class="col-7H1">
+					<h1 class="welcome2">Willkommen bei der jGBM Tübingen</h1>
 				</div>
-				<div class="col-2">
-					<img class="welcomeLogo"  src="../pictures/Logo_junior_gbm_tübingen.png" alt="WelcomeLogo">
+				<div class="col-3ap1">
+					<img class="welcomeLogo"  src="img/Logo_junior_gbm_tübingen.png" alt="WelcomeLogo">
 				</div>
-				<div class="col-3">
-					<p>Die Junior GBM Tübingen ist eine von momentan 25 Stadtgruppen, die in der bundesweiten Junior GBM organisiert sind.<br/>
+				<div class="col-6a">
+					<p>Die Junior GBM Tübingen ist eine von momentan 25 Stadtgruppen, die in der bundesweiten Junior GBM organisiert sind.
 					 Wir in Tübingen haben derzeit 23 aktive Mitglieder - vom Bachelorstudenten bis zum Doktoranden. 
-					 Unsere Mitglieder kommen aus den Fachdisziplinen Biochemie, Biologie, Bioinformatik und Pharmaceutical Sciences & Technologies.
+					 Unsere Mitglieder kommen aus den Fachdisziplinen Biochemie, Biologie, Bioinformatik und Pharmaceutical Sciences 	 Technologies.
 					 </p>
-					<img class="welcomePic" src="../pictures/vorstand.jpg">
+					<img class="welcomePic2" src="img/vorstand.jpg" > 
 				</div>
-				<aside class="willkommen">
-					<div class="news">
+				<div class="col-3side">
+					<div class="news" id="stadt">
 						<!-- not working??? -->
 						<newsheader>Veranstaltung1<br />
 						</newsheader>
@@ -73,94 +84,119 @@
 						wo: in niemandshausen<br />
 						</newscontent>
 					</div>
-				</aside>
+				</div>
+			</div>
 		</section>
 
 		<!-- Semesterprogramm Teil -->
+		<div class="inter" id="interStadt1" data-enllax-ratio="0.3" ><a name="programm"></a></div>
 		<section class="lightRed">
-			<section class="text">
-				<h1>Das Semesterprogramm</h1>
-				<p>Wintersemester 2015/2016
+				<div class="col-1a">
+				<h1 class="col-7H1">Das Semesterprogramm</h1>
+				<div class="col-8b">
+					<h2 class="programm">Wintersemester 2015/2016 </h2>
+					
+					<h3 class="programm">06.11.2015: Besichtigung der Hain Lifescience GmbH, Nehren</h3>
+					<p class="programm">
+					Führung und Schwerpunktthemenbesprechung<br/>
+					Ort: Hardwiesenstraße 1, 72147 Nehren</p>
 
-				06.11.2015: Besichtigung der Hain Lifescience GmbH, Nehren
-
-				Führung und Schwerpunktthemenbesprechung
-
-				Ort: Hardwiesenstraße 1, 72147 Nehren
-
-			04.12.2015: Besichtigung des EMBL (European Molecular Biology Laboratory), Heidelberg
-
-				Führung und Schwerpunktthemenbesprechung
-
+					<h3 class="programm">
+					04.12.2015: Besichtigung des EMBL (European Molecular Biology Laboratory), Heidelberg</h3>
+					<p class="programm">
+					Führung und Schwerpunktthemenbesprechung<br/>
 					Ort: Meyerhofstraße 1, 69117 Heidelberg
-
- 
-
-					15.01.2016: Besichtigung der Novartis AG, Basel
-
-					Führung und Schwerpunktthemenbesprechung
-
+					</p>
+	 
+					<h3 class="programm">
+					15.01.2016: Besichtigung der Novartis AG, Basel</h3>
+					<p class="programm">
+					Führung und Schwerpunktthemenbesprechung<br/>
 					Ort: Fabrikstrasse 2, 4056 Basel</p>
-			</section>
-			<a name="programm"></a>
+					
+			</div>
+			</div>
+
 		</section>
 
 		<!--aktivität -->
+		<div class="inter" id="interStadt2" data-enllax-ratio="0.3" ><a name="aktivitaet"></a></div>
 		<section class="white">
-			<a name="aktivität"></a>
-			<section class="text">
-				<h1>Unsere Aktivitäten</h1>
-				<img src="dummy" alt="dummy" width="110" height="110">
-				<p>
-Besuch bei Roche in Penzberg
-
-"Doing now what patients need next" - Unter diesem Slogan lernten wir die Firma Roche Diagnostics GmbH am 19.06.2015 in Penzberg kennen. Gegründet wurde die Firma 1896 in Basel, der Standort Penzberg, welchen wir besichtigten, entstand im Jahr 1972. Mit insgesamt 88.500 Mitarbeitern und mehr als 150 Standorten weltweit ist Roche eines der führenden Pharmaunternehmen.
-
-Eingangs wurde uns von Herr Herbert Von der Eltz die beiden Divisionen - die Pharma Disvision und die Diagnostik Division - vorgestellt. Wie im Slogan bereits impliziert, beschäftigt sich die Pharma Division hauptsächlich mit personalisierter Medizin, d.h. mit der Forschung und Entwicklung von beispielsweise therapeutischen Antikörpern. Einer der Top Seller ist MabThera (Rituxan), ein Antikörper gegen das Zelloberflächenmolekül CD20, welcher bei Leukämie zum Einsatz kommt.
-
-Während die Pharma Division etwa 80% des Umsatzes von Roche ausmacht, werden über die Diagnostik Division etwa 20% Umsatz eingebracht. Hier werden hauptsächlich Assays und Lösungskits für verschiedenste Testsysteme der Diagnostik hergestellt. Nachdem uns Frau Erika Dillmann die Einstiegsmöglichkeiten und sozialen Unterstützungen durch Roche darlegte, gab uns Herr Christoph Berding einen Einblick in die Statistik, welche bei vielen Fragestellungen zum Einsatz kommt.</p>
-			</section>
+			<div class="col-1a">
+				<h1 class="col-7H1">Unsere Aktivitäten</h1>
+				<div class=" col-6a">
+					<h2>Besuch bei Roche in Penzberg</h2>
+					<p>
+					"Doing now what patients need next" - Unter diesem Slogan lernten wir die Firma Roche Diagnostics GmbH am 19.06.2015 in Penzberg kennen. Gegründet wurde die Firma 1896 in Basel, der Standort Penzberg, welchen wir besichtigten, entstand im Jahr 1972. Mit insgesamt 88.500 Mitarbeitern und mehr als 150 Standorten weltweit ist Roche eines der führenden Pharmaunternehmen.<br/>
+					
+					Eingangs wurde uns von Herr Herbert Von der Eltz die beiden Divisionen - die Pharma Disvision und die Diagnostik Division - vorgestellt. Wie im Slogan bereits impliziert, beschäftigt sich die Pharma Division hauptsächlich mit personalisierter Medizin, d.h. mit der Forschung und Entwicklung von beispielsweise therapeutischen Antikörpern. Einer der Top Seller ist MabThera (Rituxan), ein Antikörper gegen das Zelloberflächenmolekül CD20, welcher bei Leukämie zum Einsatz kommt.
+					
+					Während die Pharma Division etwa 80% des Umsatzes von Roche ausmacht, werden über die Diagnostik Division etwa 20% Umsatz eingebracht. Hier werden hauptsächlich Assays und Lösungskits für verschiedenste Testsysteme der Diagnostik hergestellt. Nachdem uns Frau Erika Dillmann die Einstiegsmöglichkeiten und sozialen Unterstützungen durch Roche darlegte, gab uns Herr Christoph Berding einen Einblick in die Statistik, welche bei vielen Fragestellungen zum Einsatz kommt.</p>
+				</div>
+				<img class="col-3ap2" id="roche" src="img/roche.jpg">
+			</div>
 		</section>
 
 		<!--Galerie - Teil -->
+
+		<div class="inter" id="interStadt3" data-enllax-ratio="0.3" ><a name="galerie"></a></div>
 		<section class="lightRed">
-			<a name="galerie"></a>
-			<section class="text">
-				<h1>Galerie</h1>
-				<p>Lalalaafölakbh Lorem ipsum dolor sit amet, consetetur
-					sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-					et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-					accusam et justo duo dolores et ea rebum. Stet clita kasd
-					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+			<div class="col-1a">
+				<h1 class="col-7H1">Galerie</h1>
+				<img class="col-7c" src="img/construction.jpg">	
 			</section>
 		</section>
 
 		<!-- Kontakt -->
-		<section class="white">
-			<a name="kontakt"></a>
-			<section class="text">
-				<h1>Kontakt</h1>
+		
+		<div class="inter" id="interStadt4" data-enllax-ratio="0.3" ><a name="kontakt"></a></div>
+
+		<section class="white kontakt2">
+			<div class="col-1a">
+				<h1 class="col-7H1">Kontakt</h1>
+				<div class="col-6a">
 				<p>
-					Neugierig geworden? Dann melde Dich doch bei uns oder besuche uns auf Facebook!
+					Neugierig geworden? <br/>
+					Dann melde Dich doch bei uns oder besuche uns auf Facebook! <br/>
+				</p>	
+				<div class="col-1">
+							<a class="col-2" href="https://www.facebook.com/juniorgbmtuebingen?ref=bookmarks" target="_blank"><img src="img/facebook.jpg" width="60px"></a>
+							<a class="col-2" href="" title="Link zur Twitter" target="_blank"><img src="img/mail.png" width="60px"></a> <br/><br/><br/>
+				</div>
 
-Vorstand des Sommersemesters 2015:
-
-Sprecher: Jonas Hagenberg
-stellv. Sprecherin: Viktoria Anselm
-Kassiererin: Anne Gresch
-
-Schriftführerin: Jutta Meyer
-Öffentlichkeitsarbeit: Nicole Knapp, Benjamin Schröder<br>
+				<div class="col-1">
+					<h2 class="vorstand">Vorstand des Sommersemesters 2015:</h2>
+				<p class="vorstand">
+					Sprecher: Anne Ries<br/>
+					stellv. Sprecherin: Viktoria Anselm<br/>
+					Kassiererin: Anne Gresch<br/>
+					Schriftführerin: Jutta Meyer<br/>
+					Öffentlichkeitsarbeit: Nicole Knapp, Patrick Fabian<br><br/>
 				</p>
-			</section>
-			<a href="https://www.facebook.com/juniorgbmtuebingen"><img
-				src="../pictures/facebook.jpg" width="30px"></a>
+				</div>
+			</div>
+			</div>
 		</section>
 
 
 		<!-- Fussnote - Impressum -Teil -->
-		<footer> Impressum: blablabla, muss eig. nur Tino drüber schauen www.junior-gbm.de ist der Internetauftritt der Juniorgruppe der Gesellschaft für Biochemie und Molekularbiologie (GBM) e.V. Die GBM ist als gemeinnützige wissenschaftliche Fachgesellschaft unter Nummer 4265 in das Vereinsregister der Stadt Frankfurt am Main eingetragen. Die GBM dient gemäß Bescheinigung des Finanzamtes Frankfurt/Main III vom 18. Oktober 2006 (Steuernummer 045 250 79314) ausschließlich und unmittelbar gemeinnützigen, insbesondere wegen der Förderung der Biochemie und Molekularbiologie, wissenschaftlichen Zwecken und ist somit zu den in § 4, Abs. 1, Ziffer 6 KStG, in § 3, Abs. 1, Ziffer 6 VStG und in § 3, Ziffer 6 GewStG bezeichneten Körperschaften, Personenvereinigungen oder Vermögensmassen gehörig. Die GBM wird durch den satzungsgemäß gewählten Vorstand vertreten: Disclaimer/Rechtliche Hinweise Die Gesellschaft für Biochemie und Molekularbiologie (GBM) e.V. ist um Richtigkeit und Aktualität ihrer Internetpräsenz bemüht. Dennoch übernimmt die GBM keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen. Wir behalten uns vor, die Gesamtheit oder Teile des Internetangebots ohne Ankündigung zu verändern, zu ergänzen, zu löschen oder zu schließen. Das setzen eines Links zu fremden Websites geschieht mit größtmöglicher Sorgfalt. Dennoch macht sich die GBM weder diese Websites noch deren Inhalte zu eigen. Wir sind nicht verantwortlich für die Inhalte dieser Seiten oder die Verfügbarkeit dieser Websites. Hyperlink-Verknüpfungen zu diesen Websites erfolgen auf eigenes Risiko des Nutzers. Das Copyright für von der GBM veröffentlichte und selbst erstellte Seiten und darin enthaltene Objekte bleibt bei der GBM. Eine Vervielfältigung oder Verwendung der Abbildungen und Texte in anderen Publikationen ist nur mit ausdrücklicher Zustimmung der GBM gestattet. --> Mit GBM absprechen  </footer>
-	</div>
+		<footer>
+	<div class="col-1a">
+				<h3>Impressum:</h3>
+			<p class="footer col-1">
+			blablabla, muss eig. nur Tino drüber schauen www.junior-gbm.de ist der Internetauftritt der Juniorgruppe der Gesellschaft für Biochemie und Molekularbiologie (GBM) e.V. 
+			Die GBM ist als gemeinnützige wissenschaftliche Fachgesellschaft unter Nummer 4265 in das Vereinsregister der Stadt Frankfurt am Main eingetragen.<br/>
+			Die GBM dient gemäß Bescheinigung des Finanzamtes Frankfurt/Main III vom 18. Oktober 2006 (Steuernummer 045 250 79314) ausschließlich und unmittelbar gemeinnützigen,
+			insbesondere wegen der Förderung der Biochemie und Molekularbiologie, wissenschaftlichen Zwecken und ist somit zu den in § 4, Abs. 1, Ziffer 6 KStG, in § 3, Abs. 1, Ziffer 6 VStG und in § 3, Ziffer 6 GewStG bezeichneten Körperschaften, 
+			Personenvereinigungen oder Vermögensmassen gehörig. Die GBM wird durch den satzungsgemäß gewählten Vorstand vertreten: Disclaimer/Rechtliche Hinweise <br/>
+			Die Gesellschaft für Biochemie und Molekularbiologie (GBM) e.V. ist um Richtigkeit und Aktualität ihrer Internetpräsenz bemüht. <br/>
+			Dennoch übernimmt die GBM keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder<br/>
+			Qualität der bereitgestellten Informationen. Wir behalten uns vor, die Gesamtheit oder Teile des Internetangebots ohne Ankündigung zu verändern, zu ergänzen, <br/>
+			zu löschen oder zu schließen. Das setzen eines Links zu fremden Websites geschieht mit größtmöglicher Sorgfalt. <br/>
+			Dennoch macht sich die GBM weder diese Websites noch deren Inhalte zu eigen. Wir sind nicht verantwortlich für die Inhalte dieser Seiten oder die Verfügbarkeit dieser Websites. 
+			Hyperlink-Verknüpfungen zu diesen Websites erfolgen auf eigenes Risiko des Nutzers. Das Copyright für von der GBM veröffentlichte und selbst erstellte Seiten und darin enthaltene Objekte bleibt bei der GBM. 
+			Eine Vervielfältigung oder Verwendung der Abbildungen und Texte in anderen Publikationen ist nur mit ausdrücklicher Zustimmung der GBM gestattet. --> Mit GBM absprechen 
+			</p>
+			</div>
 </body>
 </html>
