@@ -1,51 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
+
+
+
 
 /*@CHARSET "UTF-8";*/
 
@@ -55,6 +12,11 @@ table {
 	Benutzen in : 
 		- Hauptseite
 		- Stadtgruppenseite (modifiziert vielleicht?) */
+
+
+
+
+
 
 
 /*Homepage Structure*/
@@ -76,7 +38,7 @@ table {
 	
 
 
-/*General-Styles: Alles was generell für die ganze Seite gelten sollte.*/		
+/*General-Styles: Alles was generell fÃ¼r die ganze Seite gelten sollte.*/		
 title {
 	color: #4C4C4C; 
 	font-family: "Muli",Verdana, Arial; 
@@ -114,8 +76,8 @@ a:active {
 			
 			
 			
-/*Navigations-Leiste -  nur für die Navigationsleiste. */
-nav.menu{ 	border: 0.5px #C8C8C8 ;
+/*Navigations-Leiste -  nur fÃ¼r die Navigationsleiste. */
+/*nav.menu{ 	border: 0.5px #C8C8C8 ;
 			border-style: none none solid none;
 			box-shadow: 2px 1px 1px  #E0E0E0 ;
 			padding: 10px 0px 0px 0px;
@@ -170,6 +132,7 @@ nav.menu{ 	border: 0.5px #C8C8C8 ;
 					margin:auto;
 					box-shadow:none;
 					resize:none;}
+*/
 /*Content - Boxes: Enthalten den Inhalt der Seite----------------------------------------------------------------------------------------------*/
 
 
@@ -272,15 +235,15 @@ section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Ar
 
 
  /*different content boxes*/	
- div.content{border:15px;
- 			border-style: none solid solid solid;
-			border-color: #cc3731;
-			padding:0%;
-			margin:0 10% 0 10%;
- 			background-color: #FFFFFF;
- 			overflow:hidden;
- 			box-shadow: 0px 0px 20px grey, 0px 0px 20px grey;}
- 				
+ div.content{
+ 			/*box-shadow: 0px 0px 20px grey, 0px 0px 20px grey;*/
+ 			}
+ 
+.redborder {
+	border:15px;
+ 	border-style: none solid solid solid;
+	border-color: #cc3731;
+}				
 	img#slider {position:relatie;
 				width:100%;	
 				height: 450px;
@@ -309,9 +272,9 @@ section.darkRed h1 {color: white; font-size: 1.875em; font-family: "Verdana", Ar
 	.inter#interStadt3{ background-image: url("img/537.jpg");}
 	.inter#interStadt4{ background-image: url("img/132.jpg");}
 					
-/*Willkommen-page: mit Seiten elementen für nachrichten und login*/
+/*Willkommen-page: mit Seiten elementen fÃ¼r nachrichten und login*/
 
-aside.willkommen {position: relative; top: 0px; width: 30%; float:right;  resize:none;} /*"muss noch höher!*/
+aside.willkommen {position: relative; top: 0px; width: 30%; float:right;  resize:none;} /*"muss noch hÃ¶her!*/
  	h1.welcome{position: relative;
  				font-size: 3.5em;
  				text-align: center}

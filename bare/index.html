@@ -8,117 +8,25 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Element Definitionen (HTML5) -->
-<script>
-	document.createElement("newsheader")
-	document.createElement("newscontent")
-</script>
 
-<!--  Aditional Packages: -->
-		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-		<script src="js/OpenLayers.js" type="text/javascript"></script>
-		<script src="js/jquery.enllax.min.js" type="text/javascript"></script>
-		<script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
-		<script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
-		<script src="js/makefixed.min.js" type="text/javascript"></script>
-		<script src="js/script.js" type="text/javascript"></script>
-		
-<!-- googleMAPS -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-
-<script>
-
- function initialize() {
-
-	var mycenter= new google.maps.LatLng(51.5,9.8);
-	
-	//mapeinstellung
-   var mapProp = {
-     center:mycenter,
-     //minimalisierter Zoom
-     zoomControl:true,
-     zoomControlOptions: {
-       style:google.maps.ZoomControlStyle.SMALL
-     },
-     //blendet Müll aus:
-     panControl:false,
-     streetViewControl:false,
-     
-     zoom:5,
-     mapTypeId:google.maps.MapTypeId.ROADMAP
-   };
-   
-   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-   
-   //All jgbm-Positions
-   var jgbmhamburg=new google.maps.LatLng(53.33,10.0);
-   var jgbmmarburg=new google.maps.LatLng(50.48,8.46);
-   var jgbmheidelberg=new google.maps.LatLng(49.25,8.3);
-   var jgbmtuebingen= new google.maps.LatLng(48.31,9.3);
-   
-   //all markers
-   var markerhamburg=new google.maps.Marker({
-	   position:jgbmhamburg,}); 
-   var markermarburg=new google.maps.Marker({
-	   position:jgbmmarburg,});
-   var markerheidelberg=new google.maps.Marker({
-	   position:jgbmheidelberg,});
-   var markertuebingen=new google.maps.Marker({
-	   position:jgbmtuebingen,});
-   
-   //set all markers
-	 markerhamburg.setMap(map);
-	 markermarburg.setMap(map);
-	 markerheidelberg.setMap(map);
-	 markertuebingen.setMap(map);
-	 
-   //Links
-
-   
-   //all info Tags
-   var infowindowHH = new google.maps.InfoWindow({
-	   content:"junior GBM Hamburg"});
-   var infowindowHD = new google.maps.InfoWindow({
-	   content:"junior GBM Heidelberg"});
-   var infowindowMR = new google.maps.InfoWindow({
-	   content:"junior GBM Marburg"});
-   var infowindowTue = new google.maps.InfoWindow({
-	   content:"junior GBM Tübingen"});
-
-
-
-	 
-	//events
-	 google.maps.event.addListener(markerhamburg, 'click', function() {
-		 infowindowHH.open(map,markerhamburg)});
-	 google.maps.event.addListener(markermarburg, 'click', function() {
-		 infowindowMR.open(map,markermarburg)});
-	 google.maps.event.addListener(markertuebingen, 'click', function() {
-		 infowindowTue.open(map,markertuebingen)});
-	 google.maps.event.addListener(markerheidelberg, 'click', function() {
-		 infowindowHD.open(map,markerheidelberg)});
-	 
-//pan back
-	 google.maps.event.addListener(map,'center_changed',function() {
-		  window.setTimeout(function() {
-		    map.panTo(mycenter);
-		  },1);
-		  });
- }
- google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 		
 
 <!-- Stylesheet Einbindung----------------------------------------------------------------------------------------------------->
-<link href="generalStyle1a.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/boxmodel.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <link REL="SHORTCUT ICON" HREF="../img/jGBM-logo-fav.bmp">
 </head>
 
 
 <body>
+
+	
 	<!-- Navigations-leiste  -->
 	<nav class="menu">
-		<a href="#willkommen"><img src="img/Logo_junior_gbm.png" class="navigation" width=140px;
+		<div class="content">
+		<a href="#willkommen" id="logo">
+			<img src="img/Logo_junior_gbm.png" class="navigation" width=140px;
 			height=auto; alt="logo"></a>
 
 		<ul class="menu">
@@ -130,11 +38,12 @@
 			<li><a href="#Mitglied" title="Mitglied werden?">Mitglied werden?</a></li>
 			<li><a href="#Kontakt" title="Kontakt">Kontakt</a></li>
 		</ul>
+		</div>
 	</nav>
 
 	<!--Content: ab hier startet der Inhalt der Homepage -->
 		<a name="willkommen"></a>
-		<div class="content">
+		<div class="content redborder">
 		<img ID="slider" src="img/sliderDummy.jpg" width=100%; alt="Slider-Dummy";>
 		<!-- Willkommen-Teil -->
 
@@ -393,6 +302,115 @@
 			</div>
 		</footer>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- Element Definitionen (HTML5) -->
+<script>
+	document.createElement("newsheader")
+	document.createElement("newscontent")
+</script>
+
+<!--  Aditional Packages: -->
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/OpenLayers.js" type="text/javascript"></script>
+		<script src="js/jquery.enllax.min.js" type="text/javascript"></script>
+		<script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+		<script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
+		<script src="js/makefixed.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		
+<!-- googleMAPS -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+
+ function initialize() {
+
+	var mycenter= new google.maps.LatLng(51.5,9.8);
+	
+	//mapeinstellung
+   var mapProp = {
+     center:mycenter,
+     //minimalisierter Zoom
+     zoomControl:true,
+     zoomControlOptions: {
+       style:google.maps.ZoomControlStyle.SMALL
+     },
+     //blendet Müll aus:
+     panControl:false,
+     streetViewControl:false,
+     
+     zoom:5,
+     mapTypeId:google.maps.MapTypeId.ROADMAP
+   };
+   
+   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+   
+   //All jgbm-Positions
+   var jgbmhamburg=new google.maps.LatLng(53.33,10.0);
+   var jgbmmarburg=new google.maps.LatLng(50.48,8.46);
+   var jgbmheidelberg=new google.maps.LatLng(49.25,8.3);
+   var jgbmtuebingen= new google.maps.LatLng(48.31,9.3);
+   
+   //all markers
+   var markerhamburg=new google.maps.Marker({
+	   position:jgbmhamburg,}); 
+   var markermarburg=new google.maps.Marker({
+	   position:jgbmmarburg,});
+   var markerheidelberg=new google.maps.Marker({
+	   position:jgbmheidelberg,});
+   var markertuebingen=new google.maps.Marker({
+	   position:jgbmtuebingen,});
+   
+   //set all markers
+	 markerhamburg.setMap(map);
+	 markermarburg.setMap(map);
+	 markerheidelberg.setMap(map);
+	 markertuebingen.setMap(map);
+	 
+   //Links
+
+   
+   //all info Tags
+   var infowindowHH = new google.maps.InfoWindow({
+	   content:"junior GBM Hamburg"});
+   var infowindowHD = new google.maps.InfoWindow({
+	   content:"junior GBM Heidelberg"});
+   var infowindowMR = new google.maps.InfoWindow({
+	   content:"junior GBM Marburg"});
+   var infowindowTue = new google.maps.InfoWindow({
+	   content:"junior GBM Tübingen"});
+
+
+
+	 
+	//events
+	 google.maps.event.addListener(markerhamburg, 'click', function() {
+		 infowindowHH.open(map,markerhamburg)});
+	 google.maps.event.addListener(markermarburg, 'click', function() {
+		 infowindowMR.open(map,markermarburg)});
+	 google.maps.event.addListener(markertuebingen, 'click', function() {
+		 infowindowTue.open(map,markertuebingen)});
+	 google.maps.event.addListener(markerheidelberg, 'click', function() {
+		 infowindowHD.open(map,markerheidelberg)});
+	 
+//pan back
+	 google.maps.event.addListener(map,'center_changed',function() {
+		  window.setTimeout(function() {
+		    map.panTo(mycenter);
+		  },1);
+		  });
+ }
+ google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </body>
 
 </html>
