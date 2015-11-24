@@ -17,6 +17,9 @@
 html {
 	font-family: Muli, Verdana, sans-serif;
 }
+body {
+	line-height: 130%
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Voces, serif;
@@ -35,9 +38,15 @@ a, a:visited {
 	color: #B31218;
 	text-decoration: none;
 }
-
 a:hover {
 	text-decoration: underline;
+}
+
+p, table, ol, ul {
+	margin: 8px 0 8px 0
+}
+ol, ul {
+	margin-left: 25px;
 }
 
 nav {
@@ -46,6 +55,10 @@ nav {
 
 .content.redborder {
 	border-color: #B31218;
+}
+
+section {
+	border-bottom: 1px solid #cecece
 }
 
 

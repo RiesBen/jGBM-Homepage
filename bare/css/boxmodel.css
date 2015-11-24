@@ -1,5 +1,5 @@
 /* box model */ 
-nav ul:after {
+nav ul:after, section:after {
     clear: both;
     content: " ";
     display: block;
@@ -20,6 +20,26 @@ nav ul:after {
 	border-left: 15px solid;
 	border-right: 15px solid;
 	padding: 0;
+}
+
+section {
+	padding: 0 10px;
+	position: relative;
+}
+
+
+section .left-column {
+	position: relative;
+	float: left;
+	width: 70%;
+	box-sizing: border-box;
+	padding-right: 10px;
+}
+
+section .right-column {
+	position: relative;
+	float: right;
+	width: 30%;
 }
 
 nav {
