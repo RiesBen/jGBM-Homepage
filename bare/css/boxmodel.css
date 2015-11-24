@@ -9,16 +9,33 @@ nav ul:after {
 }
 
 .content {
-	box-model: border-box
+	box-sizing: border-box;
 	padding:10px;
 	margin: 0 auto;
 	max-width: 1000px;
 	position: relative;
 }
 
+nav {
+	padding-bottom: 5px;
+}
 
-#nav ul li{
+nav ul{
+	display: flex;
+	margin-top: 25px;
+	padding-left: 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row
+    align-content: stretch;
+}
+nav ul li{
 	float: left;
+	fleax-growth: 1;
+	flex: 10 10 auto
+}
+nav ul li a{
+ padding: 8px;
 }
 
 #logo {
