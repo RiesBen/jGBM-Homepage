@@ -19,7 +19,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: serif;
+	font-family: Voces, serif;
 	margin: 8px 0 8px 0;
 	font-weight: 700
 }
@@ -31,13 +31,21 @@ h2 {
 	
 }
 
-a, a:visted {
+a, a:visited {
 	color: #B31218;
 	text-decoration: none;
 }
 
 a:hover {
 	text-decoration: underline;
+}
+
+nav {
+	border-bottom: 1px solid #cecece
+}
+
+.content.redborder {
+	border-color: #B31218;
 }
 
 
