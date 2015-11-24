@@ -11,5 +11,30 @@
   font-weight: 400;
   src: local('Muli'), url(https://fonts.gstatic.com/s/muli/v7/z6c3Zzm51I2zB_Gi7146Bg.woff2) format('woff2');
 }
+
+
+html {
+	font-family: Muli, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: serif;
+	margin: 8px 0 8px 0;
+	font-weight: 700
+}
+h1 {
+	margin: 17px 0 15px 0
+	font-size: 14pt;
+}
+h2 {
 	
-  					
+}
+
+a, a:visted {
+	color: #B31218;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
