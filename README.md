@@ -9,7 +9,6 @@ Wir benutzen vermutlich Drupal
 
 ## Roadmap
 - desice for design 1,2 or 3 [done, Design 2]
-  - should this now be a landigpage style (everything one one page) + Stadtgruppen or not?
   - move old alternative designs into archive [done] 
   - create new working directory bare [done]
 - create HTML and CSS as a basis for a drupal template [todo]
@@ -20,6 +19,7 @@ Wir benutzen vermutlich Drupal
   - Create grid (there are no optical lines currently) [todo]
     - reposition logo  [todo]
     - position menu [todo]
+      - fix menu when scrolling (revisit code, consider using css) [todo]
   - consider removing boxshadow around large box (cleaner look, as currently used by apple, google and microsoft in all their producs) [todo]
   - cleanup css [todo]
 - how do I navigate to the main page from a stadtgruppen page? [todo]
