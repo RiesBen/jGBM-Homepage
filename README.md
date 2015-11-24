@@ -8,7 +8,7 @@ Noch zu schreiben
 Wir benutzen vermutlich Drupal
 
 ## Roadmap
-- desice for design 1,2 or 3 [done, Design 2]
+- decide for design 1 or 2[done, Design 2]
   - move old alternative designs into archive [done] 
   - create new working directory bare [done]
 - create HTML and CSS as a basis for a drupal template [todo]
