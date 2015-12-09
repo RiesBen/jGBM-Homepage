@@ -14,7 +14,7 @@
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
- body {background: red !important}
+ body {}
 #page,
 .region-bottom {
   margin-left: auto;
