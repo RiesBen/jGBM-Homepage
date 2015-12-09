@@ -47,6 +47,7 @@ header .header__region{
 #logo {
 	float: left;
 	width: 140px;
+	margin-top: 8px;
 }
 
 
