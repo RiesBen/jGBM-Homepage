@@ -9,7 +9,7 @@ h1 {
 }
 
 
-a, a:visited {
+a, a:visited, header ul.menu li a {
 	color: #B31218;
 	text-decoration: none;
 }
@@ -41,7 +41,7 @@ section {
 
 /* box model kram, sollte eigenen file bekommen */
 header .header__region{
-	float: left;
+	clear: none
 }
 
 #logo {
@@ -63,12 +63,13 @@ header ul.menu li{
 	float: left;
 	fleax-growth: 1;
 	flex: 10 10 auto;
-	list-style-type: none;
+	list-style-type: none !important;
+	list-style-image: none !important;
 	margin: 0;
 	padding: 0;
 }
 header ul.menu li a{
- padding: 8px;
+	 padding: 8px;
 }
 
 
