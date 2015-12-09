@@ -39,3 +39,10 @@ section {
 }
 
 
+#logo {
+	float: left;
+	width: 140px;
+	height: 56px;
+	background: url('../imgages/Logo_junior_gbm') no-repeat center center
+}
+
