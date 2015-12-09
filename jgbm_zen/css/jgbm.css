@@ -38,22 +38,30 @@ section {
 	border-bottom: 1px solid #cecece
 }
 
+header {
+	border-bottom: 1px solid #CECECE;	
+}
 
 /* box model kram, sollte eigenen file bekommen */
 header .header__region{
 	clear: none
 }
+header{
+	padding-bottom: 10px;
+}
+.jgbm-header {
+	padding-top: 15px;
+}
 
 #logo {
 	float: left;
 	width: 140px;
-	margin-top: 8px;
 }
 
 
 header ul.menu{
 	display: flex;
-	margin-top: 25px;
+	margin-top: 20px;
 	padding-left: 25px;
     flex-wrap: wrap;
     align-items: flex-start;
