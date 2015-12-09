@@ -39,10 +39,32 @@ section {
 }
 
 
+/* box model kram, sollte eigenen file bekommen */
+header .header__region{
+	float: left;
+}
+
 #logo {
 	float: left;
-	width: 140px;
-	height: 56px;
-	background: url('../images/Logo_junior_gbm') no-repeat center center
 }
+
+
+header ul.menu{
+	display: flex;
+	margin-top: 25px;
+	padding-left: 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row
+    align-content: stretch;
+}
+header ul.menu li{
+	float: left;
+	fleax-growth: 1;
+	flex: 10 10 auto
+}
+header ul.menu li a{
+ padding: 8px;
+}
+
 
