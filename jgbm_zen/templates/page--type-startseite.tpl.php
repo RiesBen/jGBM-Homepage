@@ -68,6 +68,8 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <!-- sorry fuer den hack hier -->
+      <img src="/sites/default/files/image_start.jpg" />
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
