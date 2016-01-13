@@ -8,12 +8,6 @@
  */
 ?>
 
-<?php
-  // Render the sidebars to see if there's anything in them.
-  $sidebar_first  = render($page['sidebar_first']);
-  $sidebar_second = render($page['sidebar_second']);
-?>
-
 <header class="header" id="header" role="banner">
 	<div class="jgbm-header">
     <?php if ($logo): ?>
@@ -74,17 +68,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      
-      <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside>
-      
-    <?php endif; ?>
       <?php print render($page['content']); ?>
-      
-      
       <?php print $feed_icons; ?>
     </div>
 
@@ -115,7 +99,11 @@
 
     </div>
 
-
+    <?php
+      // Render the sidebars to see if there's anything in them.
+      $sidebar_first  = render($page['sidebar_first']);
+      $sidebar_second = render($page['sidebar_second']);
+    ?>
 
     <?php if ($sidebar_first || $sidebar_second): ?>
       <aside class="sidebars">
