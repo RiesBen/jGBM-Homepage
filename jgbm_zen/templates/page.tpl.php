@@ -14,7 +14,7 @@
     <?php
     	// maybe display some stadgruppen logo
     	$activeTrail = menu_get_active_trail();
-    	print_r(menu_secondary_menu());
+    	print_r(menu_get_active_menu_names());
     	/*foreach($activeTraile as $item=>$array){
     		print_r($array);
     		if($array["menu_name"] == "menu-stadtgruppen"){
