@@ -58,7 +58,7 @@ ol, ul {
 
 
 nav {
-	border-bottom: 1px solid #cecece
+	
 }
 
 .content.redborder {
@@ -119,6 +119,7 @@ header #block-menu-menu-stadtgruppen {
 }
 #secondary-menu {
 	float: none;
+	margin-bottom: 1.5em;
 }
 
 
