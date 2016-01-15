@@ -14,7 +14,14 @@
     <?php
     	// maybe display some stadgruppen logo
     	$activeTrail = menu_get_active_trail();
-    	print_r($activeTrail);
+    	#print_r($activeTrail);
+    	foreach($activeTraile as $item=>$array){
+    		if($array["menu_name"] == "menu-stadtgruppen"){
+    			$stadtgruppe = $array["link_title"];
+    			echo $stadtgruppe;
+    		}
+    	}
+
     ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
