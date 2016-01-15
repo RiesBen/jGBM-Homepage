@@ -11,6 +11,11 @@
 <header class="header" id="header" role="banner">
 	<div class="jgbm-header">
     <?php if ($logo): ?>
+    <?php
+    	// maybe display some stadgruppen logo
+    	$activeTrail = menu_get_active_trail();
+    	print_r($activeTrail);
+    ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
 
