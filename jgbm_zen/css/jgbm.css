@@ -113,13 +113,18 @@ header ul.menu li a{
 }
 
 
+/* multicolumn only on big screens */
+@media min-width: 1300 {
+	#content.startseite .field-type-text-long {
+		column-count: 2;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-gap: 40px;
+	}
 
-#content.startseite .field-type-text-long {
-	column-count: 2;
-	-moz-column-count: 2;
-	-webkit-column-count: 2;
-	column-gap: 40px;
 }
+
+
 
 /* float login */
 #block-user-login {
