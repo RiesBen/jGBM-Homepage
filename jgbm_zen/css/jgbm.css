@@ -114,6 +114,11 @@ header ul.menu li a{
 
 
 
+#content.startseite {
+	column-count: 3;
+	column-gap: 40px;
+}
+
 /* float login */
 #block-user-login {
 	float: right;
