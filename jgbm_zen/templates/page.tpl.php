@@ -16,6 +16,7 @@
     	$activeTrail = menu_get_active_trail();
     	#print_r($activeTrail);
     	foreach($activeTraile as $item=>$array){
+    		print_r($array);
     		if($array["menu_name"] == "menu-stadtgruppen"){
     			$stadtgruppe = $array["link_title"];
     			echo $stadtgruppe;
