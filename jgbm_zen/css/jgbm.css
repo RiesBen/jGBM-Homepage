@@ -114,8 +114,10 @@ header ul.menu li a{
 
 
 
-#content.startseite {
-	column-count: 3;
+#content.startseite .field-type-text-long {
+	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
 	column-gap: 40px;
 }
 
