@@ -13,8 +13,35 @@
     <?php if ($logo): ?>
     <?php
     	// maybe display some stadgruppen logo
-   		print_r(menu_get_active_trail());
+    	$stadt = False;
+    	$alles = menu_tree_all_data("main-menu");
+		
+		# somehow create an array with all the active stadtgruppen:
+    	$stadtgruppenList = [];
+		foreach($alles as $key=>$array){
+			if(strpos($key, "tadtgrup")){
+				$stadtgruppenlevel = $array['below'];
 
+				foreach($stadtgruppenlevel as $arr){
+					$stadtgruppenList[] = strtolower($arr['link']['link_title']);
+				}
+			}
+		}
+		
+    	# get all the stadtgruppen:
+   		$activetrail = menu_get_active_trail();
+		foreach($activetrail as $key=>$obj){
+			if(isset($obj['link_title']) and  in_array(strtolower($obj['link_title']), $stadtgruppenList)){
+				$pos = array_search(strtolower($obj['link_title']), $stadtgruppenList);
+				$stadt = $stadtgruppenList[$pos];
+			}
+		}
+    ?>
+    
+    <?php
+    	if($stadt){
+    		$logo = $logo."?$stadt";
+    	}
     ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
