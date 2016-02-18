@@ -15,7 +15,11 @@
 /* Component (SMACSS module) rules */
 @import "components/misc.css";
 
+@import "font-awesome.min.css";
+
 @import "jgbm.css";
+
+@import "jgbm-mobile-menu.css";
 
 /* Optionally, add your own components here. */
 @import "print.css";
