@@ -80,9 +80,15 @@ header#header {
 }
 
 /* box model kram, sollte eigenen file bekommen */
+body{
+    border:15px;
+    border-style: none solid solid solid;
+    border-color: #cc3731;
+}
+
 header .header__region{
 	clear: none
-}
+	}
 header{
 	padding-bottom: 3px;
 }
