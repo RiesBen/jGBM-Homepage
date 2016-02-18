@@ -34,13 +34,15 @@
 			if(isset($obj['link_title']) and  in_array(strtolower($obj['link_title']), $stadtgruppenList)){
 				$pos = array_search(strtolower($obj['link_title']), $stadtgruppenList);
 				$stadt = $stadtgruppenList[$pos];
+				#echo "aktuelle stadtgruppe $stadt";
 			}
 		}
-    ?>
-    
-    <?php
+
+  
     	if($stadt){
-    		$logo = $logo."?$stadt";
+    		$logo =  path_to_theme()."/images/logos/logo_jgbm_$stadt.jpg";
+    	}else{
+
     	}
     ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
