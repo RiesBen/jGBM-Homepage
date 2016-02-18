@@ -80,10 +80,18 @@ header#header {
 }
 
 /* box model kram, sollte eigenen file bekommen */
-body{
+
+div#content{
     border:15px;
     border-style: none solid solid solid;
     border-color: #cc3731;
+	  padding: 0px;
+}
+div.field{
+	padding: 0px 10px;
+}
+div.field-type-image{
+	padding:0px;
 }
 
 header .header__region{
