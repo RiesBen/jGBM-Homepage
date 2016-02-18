@@ -1,0 +1,78 @@
+@media (max-width: 800px) {
+	
+	header #block-system-main-menu,header #block-menu-block-1 {
+		display: none;
+	}
+	#mobile-menu {
+		display: block;
+		float: right;
+		width: 60px;
+		height: 43px;
+		margin-top: 10px;
+		background: url('../images/mobile-menu.png');
+		margin-bottom: 30px;
+		text-indent: -9999em;
+		
+	}	
+	
+	header ul.menu {
+		/*display: none;*/
+		clear: both;
+		background: #fff;
+		display: block;
+		padding: 0;
+		margin: 15px 0 0 0;
+		border-top: 1px solid #666;
+	}
+
+	
+	header ul.menu li {
+		float: none;
+	}
+	header ul.menu li ul {
+		border-top: none !important;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	header ul.menu li a {
+		display: block;
+		box-sizing: border-box;
+		width: auto;
+		border-bottom: 1px solid #666;
+		padding: 6px 8px;
+		transition: background 0.02s linear;
+	}
+	header ul.menu li ul li a {
+		margin-left: 20px;
+	}
+	header ul.menu li a:hover {
+		background-color: #E4E4E4;
+		text-decoration: none;
+	}
+	
+	
+	/* hide login */
+	#block-user-login {
+		float: none;
+	}
+	#block-user-login form {
+		display: none;
+	}
+	#show-form {
+		display: block;
+		cursor: pointer;
+		width: auto;
+		float: right;
+		color: #fff;
+		background: #B31218;
+		border-radius: 2px;
+		text-align: center;
+		padding: 6px 12px;
+	}
+	
+
+	
+
+}

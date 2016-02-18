@@ -7,13 +7,13 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-
+<a name="top"></a>
 <header class="header" id="header" role="banner">
 	<div class="jgbm-header">
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
-
+	<div id="mobile-menu">Mobile Menu</div>
     <?php if ($site_name || $site_slogan): ?>
       <div class="header__name-and-slogan" id="name-and-slogan">
         <?php if ($site_name): ?>
@@ -68,13 +68,13 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <!-- sorry fuer den hack hier -->
-      <img src="/sites/default/files/image_start.jpg" />
+      <!-- sorry fuer den hack hier, dass ist das Titelbild 
+      <img src="/sites/default/files/image_start.jpg" />-->
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
 
-    <div id="navigation">
+    <!--<div id="navigation">
 
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">
@@ -99,7 +99,7 @@
 
       <?php print render($page['navigation']); ?>
 
-    </div>
+    </div>-->
 
     <?php
       // Render the sidebars to see if there's anything in them.

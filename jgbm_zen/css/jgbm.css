@@ -1,11 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Lato:400,700,400italic);
 
 /* basics */
+body {
+	color: #2c2c2c
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Josefin Slab", serif;
 	margin: 8px 0 8px 0;
-	font-weight: 700
+	font-weight: 700;
+	color: #000;
 }
 h1 {
 	margin: 17px 0 15px 0
@@ -46,7 +50,7 @@ a, a:visited, header ul.menu li a {
 	color: #B31218;
 	text-decoration: none;
 }
-a:hover {
+a:hover, header ul.menu li a:hover{
 	text-decoration: underline;
 }
 
@@ -89,17 +93,24 @@ header{
 #logo {
 	float: left;
 	width: 140px;
+	display: block;
+}
+
+#mobile-menu, #show-form {
+	display: none;
 }
 
 
 header ul.menu, #secondary-menu ul{
 	display: flex;
-	margin-top: 20px;
+	position: relative;
+	margin: 20px 0 0 0;
 	padding-left: 25px;
     flex-wrap: wrap;
     align-items: flex-start;
     flex-direction: row
     align-content: stretch;
+    z-index: 100;
 }
 header ul.menu li, #secondary-menu ul li{
 	float: left;
@@ -109,19 +120,48 @@ header ul.menu li, #secondary-menu ul li{
 	list-style-image: none !important;
 	margin: 0;
 	padding: 0;
+	z-index: 101;
 }
 header ul.menu li a, #secondary-menu ul li a{
 	 padding: 8px;
 }
 
+/* dropdown only on screens larger than 800 px in with, else we switch to mobile menu anyways */
+@media (min-width: 800px) {
 
-/* stadtgruppen menu */
-header #block-menu-menu-stadtgruppen {
-	display: none
-}
-#secondary-menu {
-	float: none;
-	margin-bottom: 1.5em;
+	header ul.menu li ul {
+		display: inline;
+		visibility: hidden;
+		position: absolute;
+		padding: 0 0 0 0;
+		margin: 25px 0 0 0;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+		z-index: 99;
+		background: rgba(255, 255, 255, 0.8);
+	
+	}
+	
+	header ul.menu li:hover > ul {
+    	visibility: visible;
+	}
+	
+	header ul.menu li ul li {
+		float: none!important;
+		position: relative;
+	}
+	header ul.menu ul li a {
+		display: block;
+		width: 160px;
+		margin-right: 0px;
+		padding: 6px 8px;
+		transition: background 0.05s linear 0s;
+	}
+	header ul.menu ul li a i {
+		color: #000;
+		margin-right: 3px;
+	}
 }
 
 
@@ -136,7 +176,13 @@ header #block-menu-menu-stadtgruppen {
 		-webkit-column-gap: 40px;
 		column-gap: 40px;
 	}
-
+	
+	/* dropdown mit 3 columns */
+	header ul.menu li ul {
+		-moz-column-count: 3;
+		-webkit-column-count: 3;
+		column-count: 3;
+		}
 }
 
 
@@ -147,6 +193,15 @@ header #block-menu-menu-stadtgruppen {
     margin-left: 10px;
     padding-left: 10px:
     border-left: 1px solid #CECECE
+}
+
+
+/* content*/
+#main {
+	padding-top: 0!important;
+}
+#main.startseite .field {
+	margin: 20px 0;
 }
 	
 
