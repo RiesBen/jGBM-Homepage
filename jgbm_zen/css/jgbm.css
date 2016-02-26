@@ -84,8 +84,12 @@ header#header {
 div#content{
     border:15px;
     border-style: none solid solid solid;
-    border-color: #cc3731;
+    border-color: rgb(230,0,0);
 	  padding: 0px;
+}
+footer{
+	border: 15px solid rgb(230, 0, 0);
+	background-color: rgb(230, 0, 0);
 }
 div.field{
 	padding: 0px 10px;
@@ -154,7 +158,6 @@ header ul.menu li a, #secondary-menu ul li a{
 		column-count: 2;
 		z-index: 99;
 		background: rgba(255, 255, 255, 0.8);
-	
 	}
 	
 	header ul.menu li:hover > ul {
