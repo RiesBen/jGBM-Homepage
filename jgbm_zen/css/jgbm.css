@@ -223,11 +223,14 @@ header ul.menu li a, #secondary-menu ul li a{
 	
 
 /* View Styles:*/
-.views-field-title{ padding: 5% 0 0 0;}
-.views-field-field-datum{color: grey; font-size: 80%; font-style:italic;
-	                      margin: -2% 2%}
-.views-field-field-veranstaltungsort{color: grey; font-size: 80%; font-style:italic;
-	                      margin: -2% 2%}
+
+/* Termine block style*/
+	h2.block__title{ 	font-weight: 800; margin: 0 0 -4% 0}
+	.views-field-title{ padding: 5% 0 0 0;}
+	.views-field-field-datumcolor{color: grey; font-size: 80%; font-style:italic;
+		                      margin: -2% 2%}
+	.views-field-field-veranstaltungsort{color: grey; font-size: 80%; font-style:italic;
+		                      margin: -2% 2%}
 	
 
 
