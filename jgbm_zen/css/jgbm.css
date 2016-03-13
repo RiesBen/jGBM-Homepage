@@ -1,5 +1,14 @@
 /*@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Lato:400,700,400italic);*/
 
+
+/*-----------------------------------------------------------------------*/
+/* SMALL WORK AROUND - CHANGE Later*/
+/* fix header*/
+header{ position: fixed;
+        width:100%;
+        z-index: 10;
+        background: white}
+/*-----------------------------------------------------------------------*/
 /* basics */
 body {
 	color: #2c2c2c
