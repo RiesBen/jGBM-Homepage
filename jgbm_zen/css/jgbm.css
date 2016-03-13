@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Lato:400,700,400italic);
+/*@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Lato:400,700,400italic);*/
 
 /* basics */
 body {
@@ -42,7 +42,7 @@ h6 {
 }
 
 body {
-	font-family: Lato
+	font-family: "Lato", Verdana, sans-serif
 }
 
 
@@ -82,15 +82,15 @@ header#header {
 /* box model kram, sollte eigenen file bekommen */
 
 div#content{
-    border:15px;
-    border-style: none solid solid solid;
-    border-color: #cc3731;
-	  padding: 0px;
+    border:12px;
+    border-style: none solid none solid;
+    border-color: #c70e14;
+	padding: 0px;
 }
 div.field{
 	padding: 0px 10px;
 }
-div.field-type-image{
+div.field-type-image, div.field-name-field-karte{
 	padding:0px;
 }
 
@@ -106,14 +106,24 @@ header{
 
 #logo {
 	float: left;
-	width: 140px;
+	height: 56px;
+	width: auto;
 	display: block;
 }
 
 #mobile-menu, #show-form {
 	display: none;
 }
-
+a#frontpageLink {
+	display: block;
+	text-indent: -9999em;
+	background: url('../logo.jpg');
+	width: 54px;
+	height: 21px;
+	position: relative;
+	float: right;
+	background-size: 54px 21px ;
+}
 
 header ul.menu, #secondary-menu ul{
 	display: flex;
@@ -180,8 +190,8 @@ header ul.menu li a, #secondary-menu ul li a{
 
 
 /* multicolumn only on big screens */
-@media (min-width: 1300px) {
-	#content.startseite .field-type-text-long {
+@media (min-width: 900px) {
+	#content.startseite .field-type-text-long .columns {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
 		column-count: 2;

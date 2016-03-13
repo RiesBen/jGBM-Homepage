@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media all and (max-width: 800px) {
 	
 	header #block-system-main-menu,header #block-menu-block-1 {
 		display: none;
@@ -16,7 +16,7 @@
 	}	
 	
 	header ul.menu {
-		/*display: none;*/
+		display: none;
 		clear: both;
 		background: #fff;
 		display: block;
@@ -50,6 +50,10 @@
 	header ul.menu li a:hover {
 		background-color: #E4E4E4;
 		text-decoration: none;
+	}
+	
+	header ul.menu .fa {
+		margin-right: 5px;
 	}
 	
 	

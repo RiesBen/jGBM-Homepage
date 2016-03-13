@@ -41,11 +41,21 @@
   
     	if($stadt){
     		$logo =  path_to_theme()."/images/logos/logo_jgbm_$stadt.jpg";
+    		$frontlink = "$front_page?q=$stadt";
     	}else{
-
+			$frontlink = $front_page;
     	}
     ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+      <a href="<?php print $frontlink ; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+      
+      <?php
+      	if($stadt){
+      	?>
+      		<a href="<?php print $front_page ; ?>" id="frontpageLink" title="zur Startseite" >Zur Startseite</a>
+      	<?php
+      	}
+      ?>
+
     <?php endif; ?>
     <div id="mobile-menu">Mobile Menu</div>
 
@@ -94,9 +104,10 @@
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
+      
+      <?php //if ($title): ?>
+       <?php /* <h1 class="page__title title" id="page-title"><?php print $title; ?></h1> */?>
+      <?php //endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
