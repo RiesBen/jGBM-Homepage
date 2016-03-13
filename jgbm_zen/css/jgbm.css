@@ -82,10 +82,22 @@ header#header {
 /* box model kram, sollte eigenen file bekommen */
 
 div#content{
+
     border:12px;
     border-style: none solid none solid;
     border-color: #c70e14;
 	padding: 0px;
+	/* benjamin 
+    border:15px;
+    border-style: none solid solid solid;
+    border-color: rgb(230,0,0);
+	padding: 0px;
+	*/
+
+}
+footer{
+	border: 15px solid rgb(230, 0, 0);
+	background-color: rgb(230, 0, 0);
 }
 div.field{
 	padding: 0px 10px;
@@ -164,7 +176,6 @@ header ul.menu li a, #secondary-menu ul li a{
 		column-count: 2;
 		z-index: 99;
 		background: rgba(255, 255, 255, 0.8);
-	
 	}
 	
 	header ul.menu li:hover > ul {
@@ -227,6 +238,17 @@ header ul.menu li a, #secondary-menu ul li a{
 #main.startseite .field {
 	margin: 20px 0;
 }
+	
+
+/* View Styles:*/
+
+/* Termine block style*/
+	h2.block__title{ 	font-weight: 800; margin: 0 0 -4% 0}
+	.views-field-title{ padding: 5% 0 0 0;}
+	.views-field-field-datumcolor{color: grey; font-size: 80%; font-style:italic;
+		                      margin: -2% 2%}
+	.views-field-field-veranstaltungsort{color: grey; font-size: 80%; font-style:italic;
+		                      margin: -2% 2%}
 	
 
 
