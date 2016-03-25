@@ -1,14 +1,6 @@
 /*@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Lato:400,700,400italic);*/
 
 
-/*-----------------------------------------------------------------------*/
-/* SMALL WORK AROUND - CHANGE Later*/
-/* fix header*/
-header{ position: fixed;
-        width:100%;
-        z-index: 10;
-        background: white}
-/*-----------------------------------------------------------------------*/
 /* basics */
 body {
 	color: #2c2c2c
@@ -117,19 +109,59 @@ div.field-type-image, div.field-name-field-karte{
 
 header .header__region{
 	clear: none
-	}
+}
 header{
 	padding-bottom: 3px;
 }
-.jgbm-header {
-	padding-top: 15px;
+
+
+/*-- header animation ----------------------------------------------------------*/
+
+header#header{ position: fixed;
+        width:100%;
+        z-index: 10;
+        background: #ffffff;
+        transition: all 0.3s ease;
+        }
+header#header {
+	padding: 12px 0;
 }
+header#header.f-nav {
+	position: fixed;
+	background: #fff;
+	padding: 0;
+	z-index: 100;
+	transition: all 0.3s ease;
+}
+header#header .block {
+	margin-bottom: 0 !important;
+}
+header.f-nav nav#topnavigation {
+	margin: 0 10px 0 10px;
+	transition: all 0.3s ease;
+}
+header.f-nav #logo {
+	width: 60px;
+  	height: 30px;
+  	margin: 0! important;
+  	transition: all 0.3s ease;
+}
+header.f-nav ul.menu {
+	margin-top: 4px;
+ 	transition: all 0.3s ease;
+}
+header.f-nav ul.menu ul.menu {
+	margin-top: 25px;
+ 	transition: all 0.3s ease;
+}
+/*-----------------------------------------------------------------------*/
 
 #logo {
 	float: left;
 	height: 56px;
 	width: auto;
 	display: block;
+	margin: -16px 0 0 0;
 }
 
 #mobile-menu, #show-form {

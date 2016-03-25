@@ -70,6 +70,19 @@ Drupal.behaviors.my_custom_behavior = {
 			showMenu();
 		});
 		
+		// fix menu bar on scroll
+		var nav = $('header#header');
+		$(window).scroll(function () {
+			// only fix menu for monitors, not mobile
+			breite = $(window).width();
+		    if ($(this).scrollTop() > 1 & breite > 800) {
+		        nav.addClass("f-nav");
+		    } else {
+		        nav.removeClass("f-nav");
+		    }
+		});
+		
+		
 	});
   }
 };
